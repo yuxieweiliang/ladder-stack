@@ -1,0 +1,249 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+.nav-tabs {
+  width: 100%;
+}
+.nav-tabs .nav-title,
+.nav-tabs nav {
+  display: flex;
+  flex-direction: row;
+}
+.nav-tabs .nav-title .menu-list,
+.nav-tabs nav .menu-list,
+.nav-tabs .nav-title a[role=menuitem],
+.nav-tabs nav a[role=menuitem] {
+  display: inline-block;
+  padding: .6em 1.4em;
+  cursor: pointer;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.nav-tabs .nav-title .menu-list:first-child,
+.nav-tabs nav .menu-list:first-child,
+.nav-tabs .nav-title a[role=menuitem]:first-child,
+.nav-tabs nav a[role=menuitem]:first-child {
+  border-top-left-radius: 4px;
+}
+.nav-tabs .nav-title .menu-list:last-child,
+.nav-tabs nav .menu-list:last-child,
+.nav-tabs .nav-title a[role=menuitem]:last-child,
+.nav-tabs nav a[role=menuitem]:last-child {
+  border-top-right-radius: 4px;
+  border-right: 1px solid #ccc;
+}
+.nav-tabs .nav-title .menu-list.active,
+.nav-tabs nav .menu-list.active,
+.nav-tabs .nav-title a[role=menuitem].active,
+.nav-tabs nav a[role=menuitem].active {
+  color: #428bca;
+  background: #eee;
+}
+.nav-tabs .nav-title .menu-list:hover,
+.nav-tabs nav .menu-list:hover,
+.nav-tabs .nav-title a[role=menuitem]:hover,
+.nav-tabs nav a[role=menuitem]:hover {
+  background: #eee;
+}
+.nav-tabs-column .nav-title,
+.nav-tabs-column nav {
+  display: flex;
+  flex-direction: column;
+}
+.nav-tabs-column .nav-title .menu-list,
+.nav-tabs-column nav .menu-list,
+.nav-tabs-column .nav-title a[role=menuitem],
+.nav-tabs-column nav a[role=menuitem] {
+  display: inline-block;
+  padding: .6em 1.4em;
+  cursor: pointer;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.nav-tabs-column .nav-title .menu-list:first-child,
+.nav-tabs-column nav .menu-list:first-child,
+.nav-tabs-column .nav-title a[role=menuitem]:first-child,
+.nav-tabs-column nav a[role=menuitem]:first-child {
+  border-top-left-radius: 4px;
+}
+.nav-tabs-column .nav-title .menu-list:last-child,
+.nav-tabs-column nav .menu-list:last-child,
+.nav-tabs-column .nav-title a[role=menuitem]:last-child,
+.nav-tabs-column nav a[role=menuitem]:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom: 1px solid #ccc;
+}
+.nav-tabs-column .nav-title .menu-list.active,
+.nav-tabs-column nav .menu-list.active,
+.nav-tabs-column .nav-title a[role=menuitem].active,
+.nav-tabs-column nav a[role=menuitem].active {
+  color: #428bca;
+  background: #eee;
+}
+.nav-tabs-column .nav-title .menu-list:hover,
+.nav-tabs-column nav .menu-list:hover,
+.nav-tabs-column .nav-title a[role=menuitem]:hover,
+.nav-tabs-column nav a[role=menuitem]:hover {
+  background: #eee;
+}
+.nav-pills .nav-title,
+.nav-pills nav {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ccc;
+}
+.nav-pills .nav-title .menu-list,
+.nav-pills nav .menu-list,
+.nav-pills .nav-title a[role=menuitem],
+.nav-pills nav a[role=menuitem] {
+  display: inline-block;
+  padding: .6em 1.4em;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  margin-bottom: -1px;
+  cursor: pointer;
+}
+.nav-pills .nav-title .menu-list:not(.active),
+.nav-pills nav .menu-list:not(.active),
+.nav-pills .nav-title a[role=menuitem]:not(.active),
+.nav-pills nav a[role=menuitem]:not(.active) {
+  border-bottom: 1px solid #ccc;
+}
+.nav-pills .nav-title .menu-list:first-child,
+.nav-pills nav .menu-list:first-child,
+.nav-pills .nav-title a[role=menuitem]:first-child,
+.nav-pills nav a[role=menuitem]:first-child {
+  border-top-left-radius: 4px;
+}
+.nav-pills .nav-title .menu-list:last-child,
+.nav-pills nav .menu-list:last-child,
+.nav-pills .nav-title a[role=menuitem]:last-child,
+.nav-pills nav a[role=menuitem]:last-child {
+  border-top-right-radius: 4px;
+  border-right: 1px solid #ccc;
+}
+.nav-pills .nav-title .menu-list.active,
+.nav-pills nav .menu-list.active,
+.nav-pills .nav-title a[role=menuitem].active,
+.nav-pills nav a[role=menuitem].active {
+  color: #428bca;
+  background: #eee;
+}
+.nav-pills .nav-title .menu-list:hover,
+.nav-pills nav .menu-list:hover,
+.nav-pills .nav-title a[role=menuitem]:hover,
+.nav-pills nav a[role=menuitem]:hover {
+  background: #eee;
+}
+.nav-pills-left {
+  display: flex;
+  flex-direction: row;
+}
+.nav-pills-left .nav-title,
+.nav-pills-left nav {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ccc;
+}
+.nav-pills-left .nav-title .menu-list,
+.nav-pills-left nav .menu-list,
+.nav-pills-left .nav-title a[role=menuitem],
+.nav-pills-left nav a[role=menuitem] {
+  display: inline-block;
+  padding: .6em 1.4em;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  margin-right: -1px;
+  cursor: pointer;
+}
+.nav-pills-left .nav-title .menu-list:not(.active),
+.nav-pills-left nav .menu-list:not(.active),
+.nav-pills-left .nav-title a[role=menuitem]:not(.active),
+.nav-pills-left nav a[role=menuitem]:not(.active) {
+  border-right: 1px solid #ccc;
+}
+.nav-pills-left .nav-title .menu-list:first-child,
+.nav-pills-left nav .menu-list:first-child,
+.nav-pills-left .nav-title a[role=menuitem]:first-child,
+.nav-pills-left nav a[role=menuitem]:first-child {
+  border-top-left-radius: 4px;
+}
+.nav-pills-left .nav-title .menu-list:last-child,
+.nav-pills-left nav .menu-list:last-child,
+.nav-pills-left .nav-title a[role=menuitem]:last-child,
+.nav-pills-left nav a[role=menuitem]:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom: 1px solid #ccc;
+}
+.nav-pills-left .nav-title .menu-list.active,
+.nav-pills-left nav .menu-list.active,
+.nav-pills-left .nav-title a[role=menuitem].active,
+.nav-pills-left nav a[role=menuitem].active {
+  color: #428bca;
+  background: #eee;
+}
+.nav-pills-left .nav-title .menu-list:hover,
+.nav-pills-left nav .menu-list:hover,
+.nav-pills-left .nav-title a[role=menuitem]:hover,
+.nav-pills-left nav a[role=menuitem]:hover {
+  background: #eee;
+}
+.nav-pills-left .nav-content,
+.nav-pills-left nav + section {
+  flex: 1;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc #ccc #ccc transparent;
+  background: #eee;
+}
+.color1 {
+  background: #6ab2f1;
+}
+.color2 {
+  background: #f35656;
+}
+.color3 {
+  background: #efa05e;
+}
+.color4 {
+  background: #55d270;
+}

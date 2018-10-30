@@ -1,0 +1,98 @@
+// 配置文件
+@import "../../style/setting.less";
+@import "../../style/func.less";
+@import "../../style/color.less";
+
+
+div.row {
+  background: #fff;
+}
+
+
+
+
+.notification {
+  .create-drop();
+  top: 100%;
+  left: 0;
+  position: relative;
+  right: 20px;
+  float: none;
+
+  .notification-close {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transition: ease .4s;
+    color: @Gray-9;
+    &:hover {
+      color: @Red;
+    }
+  }
+  .notification-content {
+    min-width: 300px;
+    max-width: 400px;
+    .notification-header {
+    }
+
+    .notification-body {
+      display: flex;
+      padding-top: 20px;
+      .notification-left {
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+      }
+      .notification-right {
+        .notification-header {
+          color: @Gray-6;
+          padding-bottom: 5px;
+          h2 {
+            font-size: 16px;
+            font-weight: normal;
+          }
+        }
+        color: @Gray-9;
+        font-size: 13px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+      }
+
+      .notification-left + .notification-right {
+        padding-left: 0;
+      }
+    }
+    .notification-btn {
+      padding: 0 20px 15px 20px;
+      text-align: right;
+    }
+  }
+
+  &-list {
+    margin: 20px 0;
+  }
+
+  &-topRight,
+  &-topLeft,
+  &-bottomLeft,
+  &-bottomRight {
+    position: fixed;
+    z-index: 101;
+    width: 335px;
+  }
+  &-topRight {
+    right: 24px;
+
+  }
+  &-topLeft {
+    left: 24px;
+  }
+  &-bottomLeft {
+    left: 24px;
+  }
+  &-bottomRight {
+    right: 24px;
+  }
+}

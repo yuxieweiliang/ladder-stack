@@ -1,0 +1,185 @@
+// 配置文件
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+
+/**
+  checkbox & radio
+*/
+
+.checkbox-radio {
+  &{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      display: none;
+    }
+    .icon {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      line-height: 1;
+      left: 0;
+      width: 1em;
+      height: 1em;
+      background: #eee;
+      border: 1px solid #ccc;
+    }
+    input:not([type="text"]):checked+.icon {
+      line-height: 1;
+      font-weight: bold;
+      border: 1px solid #0077b3;
+      text-align: center;
+      &:before {
+        transform: rotate(45deg) scale(1);
+        position: absolute;
+        left: .24em;
+        top: 0;
+        display: table;
+        content: " ";
+        transition: all .1s cubic-bezier(.71,-.46,.88,.6);
+      }
+    }
+
+    &:hover {
+      .icon {
+        border: 1px solid #0077b3;
+        transition: ease .4s;
+      }
+    }
+  }
+
+}
+
+
+.checkbox {
+  &:extend(.checkbox-radio all);
+
+  .icon {
+    border-radius: 2px;
+  }
+
+  input[type="checkbox"]:checked+.icon {
+    background: #0077b3;
+    &:before {
+      width: .3em;
+      height: .6em;
+      border: 2px solid #fff;
+      border-top: 0;
+      border-left: 0;
+    }
+  }
+}
+
+.radio {
+  &:extend(.checkbox-radio all);
+
+  .icon {
+    border-radius: 1em;
+  }
+
+  input[type="radio"]:checked+.icon {
+    &:before {
+      left: 3px;
+      top: 3px;
+      width: .5em;
+      height: .5em;
+      background: #0077b3;
+      border-radius: 1em;
+    }
+  }
+
+}
+/*
+.checkbox-radio {
+  &{
+    position: relative;
+    display: inline-block;
+    padding-left: 1.2em;
+    cursor: pointer;
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      display: none;
+    }
+    .icon {
+      position: absolute;
+      display: inline-block;
+      cursor: pointer;
+      line-height: 1;
+      left: 0;
+      width: 1em;
+      height: 1em;
+      background: #eee;
+      border: 1px solid #ccc;
+    }
+    input:not([type="text"]):checked+.icon {
+      position: absolute;
+      display: table;
+      line-height: 1rem;
+      font-weight: bold;
+      border: 1px solid #0077b3;
+      text-align: center;
+      &:before {
+        transform: rotate(45deg) scale(1);
+        position: absolute;
+        left: 4px;
+        top: 0;
+        display: table;
+        content: " ";
+        transition: all .1s cubic-bezier(.71,-.46,.88,.6);
+      }
+    }
+
+    &:hover {
+      .icon {
+        border: 1px solid #0077b3;
+        transition: ease .4s;
+      }
+    }
+  }
+
+}
+
+
+.checkbox {
+  &:extend(.checkbox-radio all);
+
+  .icon {
+    border-radius: 2px;
+  }
+
+  input[type="checkbox"]:checked+.icon {
+    background: #0077b3;
+    &:before {
+      width: .3em;
+      height: .6em;
+      border: 2px solid #fff;
+      border-top: 0;
+      border-left: 0;
+    }
+  }
+}
+
+.radio {
+  &:extend(.checkbox-radio all);
+
+  .icon {
+    border-radius: 1em;
+  }
+
+  input[type="radio"]:checked+.icon {
+    &:before {
+      left: 3px;
+      top: 3px;
+      width: .5em;
+      height: .5em;
+      background: #0077b3;
+      border-radius: 1em;
+    }
+  }
+
+}*/

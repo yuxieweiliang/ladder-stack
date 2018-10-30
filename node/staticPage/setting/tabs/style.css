@@ -1,0 +1,104 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+.tab-nav-ctrl {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid #d9d9d9;
+}
+.tab-nav-ctrl .tab-prev,
+.tab-nav-ctrl .tab-next {
+  width: 2em;
+}
+.tab-nav-ctrl .tab-nav {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+.tab-nav-ctrl .tab-nav .tab-item {
+  padding: .6em;
+  cursor: pointer;
+  margin-right: 1.2em;
+}
+.tab-nav-ctrl .tab-nav .tab-item.active {
+  color: #368ed2;
+  border-bottom: 2px solid #368ed2;
+  margin-bottom: -1px;
+}
+.tab-nav-ctrl .tab-nav .tab-item:not(.disabled):hover {
+  color: #368ed2;
+}
+.tab-nav-ctrl .tab-nav .tab-item.disabled {
+  cursor: default;
+  color: #999;
+}
+.tab-nav-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-right: 1px solid #d9d9d9;
+}
+.tab-nav-column .tab-prev,
+.tab-nav-column .tab-next {
+  height: 2em;
+}
+.tab-nav-column .tab-nav {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.tab-nav-column .tab-nav .tab-item {
+  padding: .6em;
+  cursor: pointer;
+  margin-bottom: .6em;
+}
+.tab-nav-column .tab-nav .tab-item.active {
+  color: #368ed2;
+  border-right: 2px solid #368ed2;
+  margin-right: -1px;
+}
+.tab-nav-column .tab-nav .tab-item:not(.disabled):hover {
+  color: #368ed2;
+}
+.tab-nav-column .tab-nav .tab-item.disabled {
+  cursor: default;
+  color: #999;
+}

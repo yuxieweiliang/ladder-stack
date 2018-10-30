@@ -1,0 +1,8 @@
+extends ../layout.pug
+block content
+  div(id="root")!=JSON.parse(domRender)
+  link(href= css)(rel="stylesheet")
+  script(src="/antd.build.js")
+  script(src= script)
+
+

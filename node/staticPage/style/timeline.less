@@ -1,0 +1,111 @@
+// 配置文件
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+
+//  popover popover-topLeft
+.box {
+  position: relative;
+}
+.main {
+  background: @White;
+}
+
+/**
+  timeline
+*/
+
+.create-tree-icon() {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.time-line {
+  color: @Gray-6;
+  font-size: 14px;
+  .time-line-list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &:before {
+      position: absolute;
+      left: 12px;
+      content: '';
+      width: 1px;
+      background: #ccc;
+    }
+    &:not(:last-child):before {
+      top: 15px;
+      height: 100%;
+    }
+    .time-line-switcher {
+      display: flex;
+      text-align: center;
+      padding: 3px 0;
+      .time-line-icon {
+        .create-tree-icon();
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        .time-clock,
+        .time-point {
+          background: @White;
+        }
+      }
+      .time-line-list-title {
+        .create-tree-icon();
+
+      }
+    }
+    .time-line-content {
+      padding-left: 20px;
+
+    }
+  }
+}
+
+.time-point {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  border: 2px solid @Blue;
+}
+.time-clock {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  border: 1px solid @Red;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 2px;
+    right: 2px;
+    width: 4px;
+    height: 4px;
+    border-left: 1px solid @Red;
+    border-bottom: 1px solid @Red;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

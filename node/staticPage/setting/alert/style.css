@@ -1,0 +1,50 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+div.row {
+  background: #fff;
+}
+.alert-danger {
+  padding: .8em;
+  color: #d85867;
+  background: #ffe3e7;
+  border: 1px solid #ffcad0;
+  border-radius: 4px;
+}

@@ -1,0 +1,137 @@
+// 配置文件
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+
+/**
+  select
+*/
+
+
+.select {
+  position: relative;
+  &-selection {
+    .input();
+    padding-right: 2em;
+    cursor: pointer;
+    &-placeholder {
+      color: @Gray-cc;
+      .placeholder();
+    }
+    &-open {
+      .dropdown-menu {
+        display: block
+      }
+    }
+    &-focused {
+      .select-selection {
+        background: #fafafa;
+        border: 1px solid #2777d1;
+        box-shadow: 0 0 3px #4794ec;
+        transition: ease .4s;
+      }
+    }
+    &-disabled {
+      .select-selection {
+        cursor: not-allowed;
+        background: #fafafa;
+        &:hover {
+          border: 1px solid #d9d9d9;
+        }
+      }
+    }
+    &[role="combobox"],
+    &[role="multiple"],
+    &[role="tags"] {
+      cursor: text;
+    }
+
+    &-single {
+    }
+    &-multiple {
+      height: auto;
+      min-height: 2em;
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+
+    &-choice {
+      margin-top: 3px;
+      height: 20px;
+      line-height: 20px;
+      color: rgba(0,0,0,.65);
+      background-color: #f3f3f3;
+      border-radius: 4px;
+      cursor: default;
+      float: left;
+      margin-right: 4px;
+      max-width: 99%;
+      position: relative;
+      overflow: hidden;
+      transition: padding .3s cubic-bezier(.645,.045,.355,1);
+      padding: 0 20px 0 10px;
+    }
+  }
+
+  &:not(.select-selection-disabled):hover {
+    &-selection {
+      border: 1px solid @Blue;
+    }
+  }
+
+  &:not(.select-selection-disabled):active {
+    &-selection {
+      background: #fafafa;
+      border: 1px solid #2777d1;
+      box-shadow: 0 0 3px #4794ec;
+      transition: ease .4s;
+    }
+  }
+
+
+
+
+  .select-icon-box {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2em;
+
+    align-items: center;
+    justify-content: center;
+  }
+  .dropdown-menu {
+    right: 0;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    li{
+      position: relative;
+      display: block;
+      &:before {
+        position: absolute;
+        top: 0;
+        padding: 3px 10px;
+        right: 10px;
+        z-index: 99;
+      }
+      &[aria-selected=false] {
+        &:before {
+          color: @Gray-ea;
+        }
+      }
+      &[aria-selected=true] {
+        background: @Gray-f2;
+        &:before {
+          color: @Blue;
+        }
+
+      }
+    }
+  }
+}

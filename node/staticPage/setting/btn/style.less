@@ -1,0 +1,148 @@
+// 配置文件
+@import "../../style/setting";
+@import "../../style/func";
+@import "../../style/color";
+
+
+.nav(@direction: border-right, @dir: border-bottom, @horn: border-top-right) {
+  display: flex;
+  .menu-list,
+  a[role=menuitem] {
+    display: inline-block;
+    padding: .6em 1.4em;
+    cursor: pointer;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+
+    @{dir}: 1px solid #ccc;
+    &:first-child {
+      border-top-left-radius: 4px;
+    }
+    &:last-child {
+      @{horn}-radius: 4px;
+      @{direction}: 1px solid #ccc;
+    }
+    &.active {
+      color: @footerColor;
+      background: @bgBodyColor;
+    }
+    &:hover {
+      background: #eee;
+    }
+  }
+
+}
+
+.nav-tabs {
+  width: 100%;
+  .nav-title,
+  nav {
+    .nav();
+    flex-direction: row;
+  }
+  &-column {
+    .nav-title,
+    nav {
+      .nav(border-bottom, border-right, border-bottom-left);
+      flex-direction: column;
+    }
+  }
+}
+.nav-pills {
+  .nav-title,
+  nav {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ccc;
+    .menu-list,
+    a[role=menuitem] {
+      display: inline-block;
+      padding: .6em 1.4em;
+      border-top: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      margin-bottom: -1px;
+      &:not(.active) {
+        border-bottom: 1px solid #ccc;
+      }
+      cursor: pointer;
+      &:first-child {
+        border-top-left-radius: 4px;
+      }
+      &:last-child {
+        border-top-right-radius: 4px;
+        border-right: 1px solid #ccc;
+      }
+      &.active {
+        color: @footerColor;
+        background: @bgBodyColor;
+      }
+      &:hover {
+        background: #eee;
+      }
+    }
+
+  }
+  &-left {
+    display: flex;
+    flex-direction: row;
+
+    .nav-title,
+    nav {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #ccc;
+      .menu-list,
+      a[role=menuitem] {
+        display: inline-block;
+        padding: .6em 1.4em;
+        border-top: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        margin-right: -1px;
+        &:not(.active) {
+          border-right: 1px solid #ccc;
+        }
+        cursor: pointer;
+        &:first-child {
+          border-top-left-radius: 4px;
+        }
+        &:last-child {
+          border-bottom-left-radius: 4px;
+          border-bottom: 1px solid #ccc;
+        }
+        &.active {
+          color: @footerColor;
+          background: @bgBodyColor;
+        }
+        &:hover {
+          background: #eee;
+        }
+      }
+
+    }
+    .nav-content,
+    nav + section {
+      flex: 1;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #ccc #ccc #ccc transparent;
+      background: #eee;
+    }
+
+  }
+}
+
+.color1 {
+  background: #6ab2f1;
+}
+.color2 {
+  background: #f35656;
+}
+.color3 {
+  background: #efa05e;
+}
+.color4 {
+  background: #55d270;
+}
+
+
+

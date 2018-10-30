@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../../public/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../public/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../../public/bootstrap-table-develop/dist/bootstrap-table.min.css">
+  <style>
+    #table-box {
+      height: 500px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<div id="table-box"><table id="table"></table></div>
+
+</body>
+<script src="./data.js"></script>
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../public/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="../../public/bootstrap-table-develop/dist/bootstrap-table.min.js"></script>
+<script>
+  $('#table').bootstrapTable({
+    height: 468,
+    columns: header,
+    data: data,
+    striped: true,// 隔行变色
+    sortable: false, // 筛选
+    sortOrder: "id", // 筛选字段
+    pagination: true, //  显示分页
+    clickToSelect: true, // 启用点击选中状态
+    search: true, // 搜索功能
+    showColumns: true, // 控制显示哪些列的按钮
+    showRefresh: true, // 刷新按钮
+    showToggle: true, // 详细视图和列表视图切换按钮
+    queryParams: {
+      limit: 10,   //页面大小
+      offset: 1  //页码
+    },
+    sidePagination: "client",
+    pageNumber: 1,
+    pageSize: 10,
+    onSearch: function() {
+      console.log('ffffffffsf')
+    },
+    onSort: function() {
+      console.log('fffffffff')
+    },
+    pageList: [10, 20, 50, 100],
+
+    // 点击某一行
+    onClickRow: function(a, b) {
+      console.log(a, b)
+    },
+    // 双击某一行
+    onDblClickRow: function() {
+      alert('onDblClickRow')
+    },
+    onClickCell: function() {
+      console.log(arguments)
+    }
+  });
+
+
+</script>
+</html>

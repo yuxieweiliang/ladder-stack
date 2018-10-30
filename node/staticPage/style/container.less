@@ -1,0 +1,104 @@
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+/**
+ * 这里定义一些常用的 class
+ */
+html,body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background: @bgBodyColor;
+  overflow: hidden;
+}
+
+.header {
+  background: @bgHeaderColor;
+  height: @heightHeader;
+  border-bottom: 1px solid #eee;
+}
+.main {
+  flex: 1;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  background: @footerColor;
+  height: @heightFooter;
+}
+.menu-list {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+// padding: left & right
+.between {
+  padding: 0 @between;
+}
+.between-sm {
+  padding: 0 @between - 5;
+}
+.between-lg {
+  padding: 0 @between + 5;
+}
+
+// 定义常用 padding & margin
+.mt {
+  margin-top: @interval;
+}
+.mt-sm {
+  margin-top: @interval - 5;
+}
+.mt-lg {
+  margin-top: @interval + 5;
+}
+.pb {
+  padding-bottom: @interval;
+}
+.pb-sm {
+  padding-bottom: @interval - 5;;
+}
+.pb-lg {
+  padding-bottom: @interval + 5;;
+}
+
+.hidden {
+  display: none;
+}
+// 文本对齐
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+
+// 文本左右对其，最后一行左对齐
+.text-between {
+  text-align: -webkit-center;
+  text-align-last: left;
+  text-align: justify;
+}
+
+// 清除浮动
+.clearfix {
+  &:after {
+    content: '';
+    display: inline-table;
+    clear: both;
+  }
+}
+

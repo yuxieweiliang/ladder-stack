@@ -1,0 +1,368 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+@keyframes antSlideUpIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+}
+@keyframes antSlideUpOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+  }
+}
+@keyframes antSlideDownIn {
+  0% {
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+  to {
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+}
+@keyframes antSlideDownOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+}
+@keyframes antSlideLeftIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes antSlideLeftOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0.8);
+  }
+}
+@keyframes antSlideRightIn {
+  0% {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes antSlideRightOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0.8);
+  }
+}
+@keyframes antSwingIn {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(0);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+.box {
+  position: relative;
+}
+.main {
+  background: #fefdfc;
+}
+/**
+  table
+*/
+.table {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.table.table-fixed-header .table-content {
+  position: relative;
+  height: 100%;
+}
+.table.table-fixed-header .table-content .table-scroll .table-header {
+  overflow: scroll;
+  margin-bottom: -17px;
+}
+.table.table-fixed-header .table-content .table-scroll .table-body {
+  position: relative;
+  overflow-x: auto;
+  max-height: calc(100% - 50px);
+  overflow-y: scroll;
+}
+.table.table-position-left .table-content .table-scroll,
+.table.table-position-right .table-content .table-scroll,
+.table.table-position-middle .table-content .table-scroll {
+  width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+}
+.table.table-position-left .table-content .table-fixed-left,
+.table.table-position-right .table-content .table-fixed-left,
+.table.table-position-middle .table-content .table-fixed-left,
+.table.table-position-left .table-content .table-fixed-right,
+.table.table-position-right .table-content .table-fixed-right,
+.table.table-position-middle .table-content .table-fixed-right {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  border-radius: 4px 0 0 0;
+  height: calc(100% - 17px);
+}
+.table.table-position-left .table-content .table-fixed-left > .table-body,
+.table.table-position-right .table-content .table-fixed-left > .table-body,
+.table.table-position-middle .table-content .table-fixed-left > .table-body,
+.table.table-position-left .table-content .table-fixed-right > .table-body,
+.table.table-position-right .table-content .table-fixed-right > .table-body,
+.table.table-position-middle .table-content .table-fixed-right > .table-body {
+  height: 100%;
+  overflow-y: auto;
+  margin-right: -17px;
+}
+.table.table-position-left .table-content .table-fixed-left > .table-body > .table-inner,
+.table.table-position-right .table-content .table-fixed-left > .table-body > .table-inner,
+.table.table-position-middle .table-content .table-fixed-left > .table-body > .table-inner,
+.table.table-position-left .table-content .table-fixed-right > .table-body > .table-inner,
+.table.table-position-right .table-content .table-fixed-right > .table-body > .table-inner,
+.table.table-position-middle .table-content .table-fixed-right > .table-body > .table-inner {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  margin-right: -17px;
+}
+.table.table-position-left .table-fixed-left,
+.table.table-position-right .table-fixed-left,
+.table.table-position-middle .table-fixed-left {
+  left: 0;
+  box-shadow: 6px 0 6px -4px rgba(0, 0, 0, 0.2);
+  transition: ease .4s;
+}
+.table.table-position-left .table-fixed-right,
+.table.table-position-right .table-fixed-right,
+.table.table-position-middle .table-fixed-right {
+  right: 17px;
+  box-shadow: -6px 0 6px -4px rgba(0, 0, 0, 0.2);
+  transition: ease .4s;
+}
+.table.table-position-left .table-fixed-left,
+.table.table-position-right .table-fixed-right {
+  box-shadow: none;
+  transition: ease .4s;
+}
+.table .table-scroll {
+  height: 100%;
+}
+.table .table-scroll .table-header {
+  padding-bottom: 0;
+}
+.table .table-header,
+.table .table-body {
+  width: inherit;
+}
+.table .table-header .table-fixed-left,
+.table .table-body .table-fixed-left,
+.table .table-header .table-fixed-right,
+.table .table-body .table-fixed-right {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  -webkit-transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  border-radius: 0;
+}
+.table .table-header .table-fixed-left,
+.table .table-body .table-fixed-left {
+  right: 0;
+  box-shadow: -6px 0 6px -4px rgba(0, 0, 0, 0.2);
+}
+.table .table-header .table-fixed-right,
+.table .table-body .table-fixed-right {
+  left: 0;
+  box-shadow: 6px 0 6px -4px rgba(0, 0, 0, 0.2);
+}
+.table .table-header .table-scroll,
+.table .table-body .table-scroll {
+  overflow: auto;
+  overflow-x: hidden;
+}
+.table .table-header table[data-ref=head],
+.table .table-body table[data-ref=body] {
+  font-size: 12px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ccc;
+  text-align: left;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+}
+.table .table-header table[data-ref=head] {
+  border-right: 1px solid #e7e7e7;
+}
+.table .table-header table[data-ref=head] .t-head > tr {
+  transition: all .3s;
+}
+.table .table-header table[data-ref=head] .t-head > tr > th {
+  padding: 16px 8px;
+  word-break: break-all;
+}
+.table .table-header table[data-ref=head] .t-head > tr > th {
+  color: #333;
+  background: #fafafa;
+  border-bottom: 1px solid #e7e7e7;
+}
+.table .table-header table[data-ref=head] .t-head tr > th {
+  border-left: 1px solid #eaeaea;
+}
+.table .table-header table[data-ref=head] .t-head tr > th:first-child,
+.table .table-header table[data-ref=head] .t-head tr > th + th {
+  border-right: none;
+}
+.table .table-header table[data-ref=head] .t-head .table-title-inner {
+  display: flex;
+  align-items: center;
+}
+.table .table-header table[data-ref=head] .t-head .table-title-inner .table-column-sorter {
+  text-align: center;
+  width: 16px;
+  height: 20px;
+  line-height: 20px;
+  margin-left: 5px;
+}
+.table .table-header table[data-ref=head] .t-head .table-title-inner .table-column-sorter .fa {
+  color: #999;
+  cursor: pointer;
+}
+.table .table-header table[data-ref=head] .t-head .table-title-inner .table-column-sorter .fa.active {
+  color: #368ed2;
+}
+.table .table-header table[data-ref=head] .t-head .table-title-inner .table-column-sorter .fa:hover {
+  color: #666;
+}
+.table .table-header table[data-ref=head] .t-head .table-title-inner .table-column-sorter .caret-up,
+.table .table-header table[data-ref=head] .t-head .table-title-inner .table-column-sorter .caret-down {
+  display: block;
+  position: relative;
+  width: 10px;
+  cursor: pointer;
+  color: #999;
+}
+.table .table-header table[data-ref=head] .t-head .table-title-inner .table-column-sorter .caret-up.active,
+.table .table-header table[data-ref=head] .t-head .table-title-inner .table-column-sorter .caret-down.active {
+  color: #368ed2;
+}
+.table .table-header table[data-ref=head] .t-head .table-title-inner .table-column-sorter .caret-up:hover,
+.table .table-header table[data-ref=head] .t-head .table-title-inner .table-column-sorter .caret-down:hover {
+  color: #666;
+}
+.table .table-header table[data-ref=head] .t-head .table-title-inner .table-column-sorter .caret-up {
+  top: 1px;
+}
+.table .table-header table[data-ref=head] .t-head .table-title-inner .table-column-sorter .caret-down {
+  top: -3px;
+}
+.table .table-body table[data-ref=body] {
+  border-right: 1px solid #e7e7e7;
+}
+.table .table-body table[data-ref=body] .t-body > tr {
+  transition: all .3s;
+}
+.table .table-body table[data-ref=body] .t-body > tr > td {
+  padding: 16px 8px;
+  word-break: break-all;
+}
+.table .table-body table[data-ref=body] .t-body > tr > td {
+  color: #666;
+  background: #fefdfc;
+  border-bottom: 1px solid #eaeaea;
+}

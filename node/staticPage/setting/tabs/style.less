@@ -1,0 +1,75 @@
+// 配置文件
+@import "../../style/setting";
+@import "../../style/func";
+@import "../../style/color";
+
+
+.tab-nav {
+  &-ctrl {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid @Gray-d9;
+    .tab-prev,
+    .tab-next {
+      width: 2em;
+    }
+    .tab-nav {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      .tab-item {
+        padding: .6em;
+        cursor: pointer;
+        margin-right: 1.2em;
+        &.active {
+          color: @Blue;
+          border-bottom: 2px solid @Blue;
+          margin-bottom: -1px;
+        }
+        &:not(.disabled):hover {
+          color: @Blue;
+        }
+        &.disabled {
+          cursor: default;
+          color: #999;
+        }
+
+      }
+    }
+  }
+  &-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-right: 1px solid @Gray-d9;
+    .tab-prev,
+    .tab-next {
+      height: 2em;
+    }
+    .tab-nav {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      .tab-item {
+        padding: .6em;
+        cursor: pointer;
+        margin-bottom: .6em;
+        &.active {
+          color: @Blue;
+          border-right: 2px solid @Blue;
+          margin-right: -1px;
+        }
+        &:not(.disabled):hover {
+          color: @Blue;
+        }
+        &.disabled {
+          cursor: default;
+          color: #999;
+        }
+
+      }
+    }
+  }
+}
+

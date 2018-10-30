@@ -1,0 +1,191 @@
+// 配置文件
+@import "../../style/setting";
+@import "../../style/func";
+@import "../../style/color";
+
+
+.nav-tabs( @dir: bottom-left, @direction: top-right, @orientation: right) {
+  display: flex;
+  &.nav-line {
+    .menu-list,
+    a[role=menuitem] {
+      &:not(.active) {
+        border: 1px solid @Gray-d9;
+      }
+      margin-@{orientation}: 0 !important;
+      &:not(:last-child) {
+        border-@{orientation}: 0;
+      }
+    }
+  }
+  .menu-list,
+  [role=menuitem] {
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    > a {
+      color: inherit;
+      display: inline-block;
+      padding: .6em;
+      cursor: inherit;
+    }
+    &:not(:last-child) {
+      margin-@{orientation}: 1px;
+    }
+
+    &:first-child {
+      border-top-left-radius: 4px;
+      border-@{dir}-radius: 4px;
+    }
+    &:last-child {
+      border-bottom-right-radius: 4px;
+      border-@{direction}-radius: 4px;
+    }
+    &.active {
+      color: @White;
+      background: @Blue;
+    }
+    &.disabled {
+      cursor: not-allowed;
+    }
+    &:not(.active):not(.disabled){
+      > a {
+        &:focus,
+        &:hover {
+          background: #eee;
+        }
+      }
+    }
+  }
+}
+
+.nav-tabs {
+  width: 100%;
+  .nav-tabs();
+  &-row {
+    flex-direction: row;
+  }
+  // 区分title与content
+  nav {
+    .nav-tabs();
+    flex-direction: row;
+  }
+  // 竖排
+  &-column {
+    flex-direction: column;
+    .nav-tabs(top-right, bottom-left, bottom);
+    nav {
+      .nav-tabs(top-right, bottom-left, bottom);
+      flex-direction: column;
+    }
+  }
+}
+
+
+
+.nav-pills(@dir: bottom, @first: top-left, @last: top-right, @direction: top, @orientation: right) {
+  &{
+    display: flex;
+    .menu-list,
+    [role=menuitem] {
+      position: relative;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      white-space: nowrap;
+      > a {
+        color: inherit;
+        display: inline-block;
+        padding: .6em;
+        cursor: inherit;
+      }
+      margin-@{dir}: -1px;
+      &:not(:last-child) {
+        border-@{orientation}: 1px solid transparent;
+      }
+      &.active {
+        border-@{dir}: 1px solid transparent;
+      }
+      &:first-child {
+        border-@{first}-radius: 4px;
+      }
+      &:last-child {
+        border-@{last}-radius: 4px;
+      }
+      &.active {
+        color: @footerColor;
+        background: @bgBodyColor;
+      }
+      &.disabled {
+        cursor: not-allowed;
+      }
+      &:not(.active):not(.disabled){
+        > a {
+          &:focus,
+          &:hover {
+            background: #eee;
+          }
+        }
+      }
+    }
+    &+.nav-content,
+    &+section {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-@{direction}:  1px solid transparent;
+      background: #eee;
+    }
+  }
+
+}
+
+.nav-pills {
+  .nav-title,
+  nav {
+    flex-direction: row;
+    border-bottom: 1px solid #ccc;
+    .nav-pills();
+  }
+  &-left {
+    display: flex;
+    flex-direction: row;
+
+    .nav-title,
+    nav {
+      flex-direction: column;
+      border-right: 1px solid #ccc;
+      .nav-pills(right, top-left, bottom-left, left, bottom)
+
+    }
+    .nav-content,
+    nav+section {
+      flex: 1;
+      padding: 10px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #ccc #ccc #ccc transparent;
+      background: #eee;
+    }
+
+  }
+}
+
+.color1 {
+  background: #6ab2f1;
+}
+.color2 {
+  background: #f35656;
+}
+.color3 {
+  background: #efa05e;
+}
+.color4 {
+  background: #55d270;
+}
+
+.color5 {
+  background: #f2f2f2;
+}
+
+
+

@@ -1,0 +1,23 @@
+// 配置文件
+@import "../../style/setting";
+@import "../../style/func";
+@import "../../style/color";
+
+
+div.row {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+div[class^=col-] {
+  height: 20px;
+  border: 1px solid #ccc;
+}
+.column.page-title {
+  height: 200px;
+  border: 1px solid #ccc;
+  > div[class^=col-] {
+    height: 40px;
+    border: 1px solid #ccc;
+  }
+}
+

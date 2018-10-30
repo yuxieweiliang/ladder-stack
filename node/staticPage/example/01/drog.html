@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../../style/btn.css">
+  <link rel="stylesheet" href="../../style/container.css">
+  <link rel="stylesheet" href="../../style/flex.css">
+  <link rel="stylesheet" href="../../style/form.css">
+  <link rel="stylesheet" href="../../style/list.css">
+  <link rel="stylesheet" href="../../style/main.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../../../node_modules/font-awesome/css/font-awesome.css">
+
+</head>
+<body>
+<div id="div" style="height: 2px; width: 200px; background: red;position: absolute;"></div>
+<div class="container column"> //  style="height: 3000px"
+  <header class="header flex">
+    <nav class="row flex-1 right-center">
+      <a class="width-100 text-right">book</a>
+      <a class="width-100 text-right">docs</a>
+      <a class="width-100 text-right">messsage</a>
+      <a class="width-100 text-right" id="show">user</a>
+    </nav>
+  </header>
+  <div class="row flex-1">
+    <div class="ratio-1 flex-center">
+      <ul class="width-80 nav-control" id="drag" draggable="true">
+        <li class="height-30 nav-item-blue" draggable="true">格雷斯</li>
+        <li class="height-30 nav-item" draggable="true">埃尔维斯卡</li>
+        <li class="height-30 nav-item" draggable="true">圣蒂安格儿</li>
+        <li class="height-30 nav-item" draggable="true">克鲁斯</li>
+        <li class="height-30 nav-item" draggable="true">梅希迪维亚</li>
+        <li class="height-30 nav-item" draggable="true">卡提奈</li>
+      </ul>
+    </div>
+    <article class="main height-200 flex-1" id="inner">
+      <div class="list height-40" style="border: 1px solid #ccc">1</div>
+      <div class="list height-40" style="border: 1px solid #ccc">2</div>
+      <div class="list height-40" style="border: 1px solid #ccc">3</div>
+      <div class="list height-40" style="border: 1px solid #ccc">4</div>
+
+    </article>
+
+  </div>
+
+  <footer></footer>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+<script src="./script.js"></script>
+</html>

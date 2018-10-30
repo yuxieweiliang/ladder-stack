@@ -1,0 +1,369 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+@keyframes antSlideUpIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+}
+@keyframes antSlideUpOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+  }
+}
+@keyframes antSlideDownIn {
+  0% {
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+  to {
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+}
+@keyframes antSlideDownOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+}
+@keyframes antSlideLeftIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes antSlideLeftOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0.8);
+  }
+}
+@keyframes antSlideRightIn {
+  0% {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes antSlideRightOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0.8);
+  }
+}
+@keyframes antSwingIn {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(0);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+.btn {
+  position: relative;
+  font-size: 14px;
+  display: inline-block;
+  height: 2em;
+  padding: 0 1em;
+  line-height: 1.8em;
+  border-radius: .3em;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  touch-action: manipulation;
+  transition: .5s ease;
+  border: 1px solid transparent;
+}
+.btn + .btn {
+  margin-left: 5px;
+}
+.btn-xs {
+  font-size: 12px;
+}
+.btn-sm {
+  font-size: 14px;
+}
+.btn-md {
+  font-size: 18px;
+}
+.btn-lg {
+  font-size: 20px;
+}
+.btn-default {
+  color: #666;
+  border: 1px solid #d9d9d9;
+  background: #fafafa;
+}
+.btn-default:hover {
+  color: #368ed2;
+  border-color: #368ed2;
+}
+.btn .disabled[disabled],
+.btn .btn-warning[disabled],
+.btn .btn-danger[disabled],
+.btn .btn-success[disabled],
+.btn .btn-info[disabled],
+.btn .btn-primary[disabled] {
+  color: #999;
+  background-color: #ddd;
+  border: 1px solid transparent;
+  cursor: not-allowed;
+}
+.btn .disabled-line[disabled],
+.btn .btn-warning-line[disabled],
+.btn .btn-danger-line[disabled],
+.btn .btn-success-line[disabled],
+.btn .btn-info-line[disabled],
+.btn .btn-primary-line[disabled] {
+  color: #ccc;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: not-allowed;
+}
+.btn .disabled-dashed[disabled],
+.btn .btn-warning-dashed[disabled],
+.btn .btn-danger-dashed[disabled],
+.btn .btn-success-dashed[disabled],
+.btn .btn-info-dashed[disabled],
+.btn .btn-primary-dashed[disabled] {
+  color: #ccc;
+  background-color: #fff;
+  border: 1px dashed #ccc;
+  cursor: not-allowed;
+}
+.btn-warning {
+  color: #fefdfc;
+  background-color: #f09e37;
+  border: 1px solid #f09e37;
+}
+.btn-warning:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #e38611;
+}
+.btn-warning-line {
+  color: #f09e37;
+  border: 1px solid #f09e37;
+  background-color: #fefdfc;
+}
+.btn-warning-line:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #f2f2f2;
+}
+.btn-warning-dashed {
+  color: #f09e37;
+  border: 1px dashed #d9d9d9;
+  background-color: #fefdfc;
+}
+.btn-warning-dashed:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #f2f2f2;
+  border: 1px dashed #f09e37;
+}
+.btn-danger {
+  color: #fefdfc;
+  background-color: #d85867;
+  border: 1px solid #d85867;
+}
+.btn-danger:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #cd3042;
+}
+.btn-danger-line {
+  color: #d85867;
+  border: 1px solid #d85867;
+  background-color: #fefdfc;
+}
+.btn-danger-line:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #f2f2f2;
+}
+.btn-danger-dashed {
+  color: #d85867;
+  border: 1px dashed #d9d9d9;
+  background-color: #fefdfc;
+}
+.btn-danger-dashed:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #f2f2f2;
+  border: 1px dashed #d85867;
+}
+.btn-success {
+  color: #fefdfc;
+  background-color: #49c1d9;
+  border: 1px solid #49c1d9;
+}
+.btn-success:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #29acc6;
+}
+.btn-success-line {
+  color: #49c1d9;
+  border: 1px solid #49c1d9;
+  background-color: #fefdfc;
+}
+.btn-success-line:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #f2f2f2;
+}
+.btn-success-dashed {
+  color: #49c1d9;
+  border: 1px dashed #d9d9d9;
+  background-color: #fefdfc;
+}
+.btn-success-dashed:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #f2f2f2;
+  border: 1px dashed #49c1d9;
+}
+.btn-info {
+  color: #fefdfc;
+  background-color: #00b38c;
+  border: 1px solid #00b38c;
+}
+.btn-info:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #008064;
+}
+.btn-info-line {
+  color: #00b38c;
+  border: 1px solid #00b38c;
+  background-color: #fefdfc;
+}
+.btn-info-line:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #f2f2f2;
+}
+.btn-info-dashed {
+  color: #00b38c;
+  border: 1px dashed #d9d9d9;
+  background-color: #fefdfc;
+}
+.btn-info-dashed:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #f2f2f2;
+  border: 1px dashed #00b38c;
+}
+.btn-primary {
+  color: #fefdfc;
+  background-color: #368ed2;
+  border: 1px solid #368ed2;
+}
+.btn-primary:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #2773ae;
+}
+.btn-primary-line {
+  color: #368ed2;
+  border: 1px solid #368ed2;
+  background-color: #fefdfc;
+}
+.btn-primary-line:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #f2f2f2;
+}
+.btn-primary-dashed {
+  color: #368ed2;
+  border: 1px dashed #d9d9d9;
+  background-color: #fefdfc;
+}
+.btn-primary-dashed:not([disabled]):hover {
+  transition: .3s ease;
+  background-color: #f2f2f2;
+  border: 1px dashed #368ed2;
+}

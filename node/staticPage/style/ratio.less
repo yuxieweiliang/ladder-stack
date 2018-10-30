@@ -1,0 +1,35 @@
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+
+@ratio: 8.33, 16.66, 25, 33.33, 41.66, 50, 58.33, 66.66, 75, 83.33, 91.66, 100;
+
+// .ratio-@{num} {width: @num} -> .ratio-1{ width: 8.33% }
+.createRatio(@i: 1) when (@i > 0) {
+  &-@{i} {
+    width: extract(@ratio, @i)+0% ;
+  }
+  .createRatio(@i - 1);
+}
+
+.ratio {
+  .createRatio(length(@ratio));
+}
+
+@media (min-width: 980px) {
+  .ratio-sm {
+    .createRatio(length(@ratio));
+  }
+}
+
+@media (min-width: 1200px) {
+  .ratio-md {
+    .createRatio(length(@ratio));
+  }
+}
+
+@media (min-width: 1680px) {
+  .ratio-lg {
+    .createRatio(length(@ratio));
+  }
+}

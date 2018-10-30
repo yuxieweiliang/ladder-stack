@@ -1,0 +1,296 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+@keyframes antSlideUpIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+}
+@keyframes antSlideUpOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+  }
+}
+@keyframes antSlideDownIn {
+  0% {
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+  to {
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+}
+@keyframes antSlideDownOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+}
+@keyframes antSlideLeftIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes antSlideLeftOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0.8);
+  }
+}
+@keyframes antSlideRightIn {
+  0% {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes antSlideRightOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0.8);
+  }
+}
+@keyframes antSwingIn {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(0);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+#root {
+  height: 100%;
+  width: 100%;
+}
+/**
+  layout
+*/
+.layout {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  /*display: flex;
+  flex-direction: column;*/
+  /*  fixed   */
+  /*  -content-scroll   */
+}
+.layout-header {
+  width: 100%;
+  height: 70px;
+  background: #368ed2;
+}
+.layout-content {
+  height: calc(100% - 170px);
+  padding: 0;
+  padding-bottom: 100px;
+}
+.layout-content:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.layout-aside {
+  float: left;
+  height: 100%;
+  width: 300px;
+  background: #f2f2f2;
+}
+.layout-aside:first-child {
+  float: left;
+}
+.layout-subject {
+  position: relative;
+  float: left;
+  width: calc(100%  -  300px);
+  height: 100%;
+}
+.layout-subject .layout-content {
+  padding: 0;
+}
+.layout-aside + .layout-subject:after,
+.layout-subject + .layout-aside:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.layout-footer {
+  position: absolute;
+  bottom: 0;
+  margin-top: -100px;
+  width: 100%;
+  height: 100px;
+  background: #368ed2;
+}
+.layout-fixed-header {
+  padding-top: 70px;
+}
+.layout-fixed-header .layout-header {
+  position: fixed;
+  top: 0;
+}
+.layout-fixed-header .layout-content {
+  padding-bottom: 100px;
+}
+.layout-content-scroll {
+  max-height: 100%;
+  height: 100%;
+}
+.layout-content-scroll .layout-subject,
+.layout-content-scroll .layout-aside,
+.layout-content-scroll .layout-content {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.layout-content-scroll .layout-content {
+  padding: 0;
+}
+.layout-content-scroll.hidden-aside > .layout-subject {
+  width: 100%;
+}
+.layout-content-scroll.hidden-aside > .layout-aside {
+  display: none;
+}
+.layout-static {
+  max-height: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.layout-static .layout-subject,
+.layout-static .layout-aside,
+.layout-static .layout-content {
+  overflow: hidden;
+}
+.layout-static .layout-content {
+  padding: 0;
+}
+.layout-static.hidden-aside > .layout-subject {
+  width: 100%;
+}
+.layout-static.hidden-aside > .layout-aside {
+  display: none;
+}
+.layout-scroll {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.pie,
+.pie-row,
+.pie-column {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.pie-row {
+  flex-direction: row;
+  overflow: hidden;
+}
+.pie-column {
+  overflow: hidden;
+}
+.pie-column-scroll {
+  flex-direction: column;
+}
+.pie-content {
+  flex: 1;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.pie-aside {
+  overflow: hidden;
+}

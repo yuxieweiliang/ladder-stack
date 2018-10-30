@@ -1,0 +1,128 @@
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+
+// 箭头
+.icon-return {
+  position: relative;
+  font-size: 6px;
+  display: block;
+  width: 1.8em ;
+  height: 1.8em ;
+  padding: 0 ;
+  cursor: pointer;
+  transition: .5s ease;
+  overflow: visible;
+  &:before,&:after {
+    position: absolute;
+    content: '一';
+    display: table;
+    left: .5em;
+  }
+  &:before {
+    transform: rotate(-45deg);
+    top: -1.1em;
+  }
+  &:after {
+    transform: rotate(45deg);
+    top: -.48em;
+    left: .4em;
+  }
+
+  &.icon-to-sm {
+    font-size: 6px;
+  }
+}
+
+
+// 二维码
+.icon-two-dimension {
+  position: relative;
+  font-size: @font-sm;
+  display: block;
+  width: 2em;
+  height: 2em;
+  border: 1px solid #666;
+  border-radius: 4px;
+  &:before {
+    position: absolute;
+    display: table;
+    color: #666;
+    content: '一';
+    width: 100%;
+    height: 100%;
+    line-height: 2em;
+    text-align: center;
+    z-index: 2;
+  }
+  &:after {
+    position: absolute;
+    top: 15%;
+    left: -1px;
+    content: '';
+    display: table;
+    width: calc(~'100% + 2px');
+    height: 70%;
+    line-height: 2em;
+    text-align: center;
+    background: #fff;
+    z-index: 1;
+  }
+}
+
+.icon-close {
+  font-size: 14px;
+  display: block;
+  position: relative;
+  min-width: 1em;
+  min-height: 1em;
+  cursor: pointer;
+  &:before, &:after {
+    position: absolute;
+    content: '一';
+    left: .1em;
+    display: table;
+    width: inherit;
+    height: inherit;
+    color: inherit;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+}
+
+
+.icon-file {
+  position: relative;
+  width: 10px;
+  height: 14px;
+  border: 1px solid #999;
+  border-radius: 2px;
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 3px;
+    border-left: 1px solid #999;
+    border-bottom: 1px solid #999;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: -1px;
+    right: -1px;
+    width: 3px;
+    height: 3px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+
+  }
+}

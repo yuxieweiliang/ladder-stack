@@ -1,0 +1,40 @@
+// 配置文件
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+
+
+.tag {
+  font-size: 12px;
+  line-height: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-align: center;
+  white-space: nowrap;
+  &.tag-sm {
+    padding: 0 4px;
+  }
+  &.tag-lg {
+    padding: 4px 8px;
+  }
+  &.tag-default {
+    padding: 0 2px;
+  }
+}
+
+.create-tag(@i: @tagColor) when (@i >= 0) {
+  .tag-@{i} {
+    &:extend(.tag all);
+    color: #fff;
+    background: extract(@tagColor, @i+1);
+    &-line {
+      &:extend(.tag all);
+      color: extract(@tagColor, @i+1);
+      border: 1px solid extract(@tagColor, @i+1);
+    }
+  }
+  .create-tag(@i - 1);
+}
+.create-tag(length(@tagColor)-1);
+
+

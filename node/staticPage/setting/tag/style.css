@@ -1,0 +1,169 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+.tag,
+.tag-6,
+.tag-6-line,
+.tag-5,
+.tag-5-line,
+.tag-4,
+.tag-4-line,
+.tag-3,
+.tag-3-line,
+.tag-2,
+.tag-2-line,
+.tag-1,
+.tag-1-line,
+.tag-0,
+.tag-0-line {
+  font-size: 12px;
+  line-height: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-align: center;
+  white-space: nowrap;
+}
+.tag.tag-sm,
+.tag-6.tag-sm,
+.tag-6-line.tag-sm,
+.tag-5.tag-sm,
+.tag-5-line.tag-sm,
+.tag-4.tag-sm,
+.tag-4-line.tag-sm,
+.tag-3.tag-sm,
+.tag-3-line.tag-sm,
+.tag-2.tag-sm,
+.tag-2-line.tag-sm,
+.tag-1.tag-sm,
+.tag-1-line.tag-sm,
+.tag-0.tag-sm,
+.tag-0-line.tag-sm {
+  padding: 0 4px;
+}
+.tag.tag-lg,
+.tag-6.tag-lg,
+.tag-6-line.tag-lg,
+.tag-5.tag-lg,
+.tag-5-line.tag-lg,
+.tag-4.tag-lg,
+.tag-4-line.tag-lg,
+.tag-3.tag-lg,
+.tag-3-line.tag-lg,
+.tag-2.tag-lg,
+.tag-2-line.tag-lg,
+.tag-1.tag-lg,
+.tag-1-line.tag-lg,
+.tag-0.tag-lg,
+.tag-0-line.tag-lg {
+  padding: 4px 8px;
+}
+.tag.tag-default,
+.tag-6.tag-default,
+.tag-6-line.tag-default,
+.tag-5.tag-default,
+.tag-5-line.tag-default,
+.tag-4.tag-default,
+.tag-4-line.tag-default,
+.tag-3.tag-default,
+.tag-3-line.tag-default,
+.tag-2.tag-default,
+.tag-2-line.tag-default,
+.tag-1.tag-default,
+.tag-1-line.tag-default,
+.tag-0.tag-default,
+.tag-0-line.tag-default {
+  padding: 0 2px;
+}
+.tag-6 {
+  color: #fff;
+  background: #9f76e4;
+}
+.tag-6-line {
+  color: #9f76e4;
+  border: 1px solid #9f76e4;
+}
+.tag-5 {
+  color: #fff;
+  background: #e87c9f;
+}
+.tag-5-line {
+  color: #e87c9f;
+  border: 1px solid #e87c9f;
+}
+.tag-4 {
+  color: #fff;
+  background: #f09e37;
+}
+.tag-4-line {
+  color: #f09e37;
+  border: 1px solid #f09e37;
+}
+.tag-3 {
+  color: #fff;
+  background: #d85867;
+}
+.tag-3-line {
+  color: #d85867;
+  border: 1px solid #d85867;
+}
+.tag-2 {
+  color: #fff;
+  background: #49c1d9;
+}
+.tag-2-line {
+  color: #49c1d9;
+  border: 1px solid #49c1d9;
+}
+.tag-1 {
+  color: #fff;
+  background: #00b38c;
+}
+.tag-1-line {
+  color: #00b38c;
+  border: 1px solid #00b38c;
+}
+.tag-0 {
+  color: #fff;
+  background: #368ed2;
+}
+.tag-0-line {
+  color: #368ed2;
+  border: 1px solid #368ed2;
+}

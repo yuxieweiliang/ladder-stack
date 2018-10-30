@@ -1,0 +1,425 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+@keyframes antSlideUpIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+}
+@keyframes antSlideUpOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+  }
+}
+@keyframes antSlideDownIn {
+  0% {
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+  to {
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+}
+@keyframes antSlideDownOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+}
+@keyframes antSlideLeftIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes antSlideLeftOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0.8);
+  }
+}
+@keyframes antSlideRightIn {
+  0% {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes antSlideRightOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0.8);
+  }
+}
+@keyframes antSwingIn {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(0);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+.menu-root {
+  display: flex;
+}
+.menu-nav {
+  display: flex;
+  flex: 1;
+}
+.menu-horizontal {
+  width: 100%;
+  flex-direction: row;
+  border-bottom: 1px solid #d9d9d9;
+}
+.menu-horizontal .menu-prev,
+.menu-horizontal .menu-next {
+  width: 2em;
+}
+.menu-vertical,
+.menu-inline {
+  flex-direction: column;
+  height: 100%;
+  border-right: 1px solid #d9d9d9;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.menu-vertical .menu-prev,
+.menu-inline .menu-prev,
+.menu-vertical .menu-next,
+.menu-inline .menu-next {
+  height: 2em;
+}
+.menu-item {
+  position: relative;
+  color: #666;
+  cursor: pointer;
+}
+.menu-item .menu-title {
+  display: flex;
+  flex-direction: row;
+  color: inherit;
+  cursor: inherit;
+  margin-right: -1px;
+  transition: ease .4s;
+}
+.menu-item .menu-title > .fa {
+  padding: 1em;
+  cursor: inherit;
+}
+.menu-item .menu-title > .fa:first-child {
+  padding-right: 0;
+}
+.menu-item .menu-title a {
+  display: flex;
+  flex: 1;
+  padding-top: .6em;
+  padding-bottom: .6em;
+  padding-right: .6em;
+  white-space: nowrap;
+  color: inherit;
+  cursor: inherit;
+}
+.menu-item .menu-title a > .fa {
+  margin: 0 .5em;
+}
+.menu-item .menu-title a + .fa {
+  padding: .6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-item:not(.disabled):hover > .menu-title {
+  color: #368ed2;
+  transition: ease .2s;
+}
+.menu-item.disabled {
+  cursor: default;
+  color: #ccc;
+}
+.menu-item.open > .menu-title {
+  color: #368ed2;
+}
+.menu-item.open > .menu-hidden {
+  display: block;
+}
+.menu-horizontal .menu-nav {
+  flex-direction: row;
+}
+.menu-horizontal .menu-nav > .menu-item {
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.menu-horizontal .menu-nav > .menu-item .menu-title a {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.menu-horizontal .menu-nav > .menu-item.open {
+  margin-bottom: 1px;
+}
+.menu-horizontal .menu-nav > .menu-item.open > .menu-title {
+  color: #368ed2;
+}
+.menu-horizontal .menu-nav > .menu-item.open > .menu-title a {
+  color: inherit;
+}
+.menu-horizontal .menu-nav > .menu-item.open > .menu-title .fa-angle-down {
+  color: inherit;
+  transform: rotate(180deg);
+  transition: ease .4s;
+}
+.menu-horizontal .menu-nav > .menu-item.open .menu-drop {
+  display: block;
+  width: 100%;
+}
+.menu-horizontal .menu-nav > .menu-item.open .menu-drop dt {
+  padding-left: 1.2em;
+}
+.menu-horizontal .menu-nav > .menu-item.open .menu-drop dd {
+  padding-left: 2.4em;
+}
+.menu-horizontal .menu-nav > .menu-item:not(.disabled):hover {
+  border-bottom: 2px solid #368ed2;
+}
+.menu-horizontal .menu-nav > .menu-item:not(.disabled):hover .menu-drop {
+  display: block;
+  width: 100%;
+}
+.menu-horizontal .menu-nav > .menu-item:not(.disabled):hover .menu-drop dt {
+  padding-left: 1.2em;
+}
+.menu-horizontal .menu-nav > .menu-item:not(.disabled):hover .menu-drop dd {
+  padding-left: 2.4em;
+}
+.menu-horizontal .menu-nav > .menu-item.active {
+  border-bottom: 2px solid #368ed2;
+}
+.menu-horizontal .menu-nav .menu-hidden .menu-item a {
+  justify-content: center;
+}
+.menu-vertical .menu-nav,
+.menu-inline .menu-nav {
+  flex-direction: column;
+}
+.menu-vertical .menu-nav .menu-item > .menu-title,
+.menu-inline .menu-nav .menu-item > .menu-title {
+  border-right: 2px solid transparent;
+  margin-right: -1px;
+}
+.menu-vertical .menu-nav .menu-item > .menu-title > .fa-angle-down,
+.menu-inline .menu-nav .menu-item > .menu-title > .fa-angle-down,
+.menu-vertical .menu-nav .menu-item > .menu-title > .fa-sort-down,
+.menu-inline .menu-nav .menu-item > .menu-title > .fa-sort-down {
+  transform: rotate(0deg);
+  transition: ease .4s;
+}
+.menu-vertical .menu-nav .menu-item.open > .menu-title,
+.menu-inline .menu-nav .menu-item.open > .menu-title {
+  border-right: 2px solid transparent;
+  margin-right: -1px;
+}
+.menu-vertical .menu-nav .menu-item.open > .menu-title > .fa-angle-down,
+.menu-inline .menu-nav .menu-item.open > .menu-title > .fa-angle-down,
+.menu-vertical .menu-nav .menu-item.open > .menu-title > .fa-sort-down,
+.menu-inline .menu-nav .menu-item.open > .menu-title > .fa-sort-down {
+  transform: rotate(180deg);
+  transition: ease .4s;
+}
+.menu-vertical .menu-nav .menu-item.open > .menu-hidden,
+.menu-inline .menu-nav .menu-item.open > .menu-hidden {
+  padding-left: 2em;
+}
+.menu-vertical .menu-nav > .menu-item > .menu-title a,
+.menu-inline .menu-nav > .menu-item > .menu-title a {
+  padding-left: 1em;
+}
+.menu-vertical .menu-nav > .menu-item > .menu-title .fa + a,
+.menu-inline .menu-nav > .menu-item > .menu-title .fa + a {
+  padding-left: .5em;
+}
+.menu-vertical .menu-nav > .menu-item.open > .menu-hidden,
+.menu-inline .menu-nav > .menu-item.open > .menu-hidden {
+  padding-left: 2em;
+}
+.menu-vertical .menu-nav > .menu-item.open:hover > .menu-title,
+.menu-inline .menu-nav > .menu-item.open:hover > .menu-title {
+  color: #368ed2;
+}
+.menu-vertical .menu-nav > .menu-item.open .active > .menu-title,
+.menu-inline .menu-nav > .menu-item.open .active > .menu-title {
+  color: #368ed2;
+  border-right: 2px solid #368ed2;
+}
+.menu-vertical .menu-nav > .menu-item.open .active:hover > .menu-title,
+.menu-inline .menu-nav > .menu-item.open .active:hover > .menu-title {
+  color: #368ed2;
+}
+.menu-vertical .menu-item:not(.disabled):hover > .menu-sub {
+  display: block;
+  min-width: 160px;
+  width: auto;
+}
+.menu-vertical .menu-item:not(.disabled):hover > .menu-sub dt {
+  padding-left: 1.2em;
+}
+.menu-vertical .menu-item:not(.disabled):hover > .menu-sub dd {
+  padding-left: 2.4em;
+}
+.menu-vertical .fa-angle-down {
+  transform: rotate(-90deg);
+}
+.menu-vertical .active .fa-angle-down {
+  transform: rotate(-90deg);
+}
+.menu-vertical .menu-sub {
+  position: absolute;
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  display: none;
+  top: 0;
+  left: calc(100% + 4px);
+}
+.menu-vertical .menu-sub .menu-item a,
+.menu-vertical .menu-sub .menu-item .fa-angle-down {
+  padding: 1em;
+}
+.menu-vertical.menu-collapsed {
+  width: 3em;
+}
+.menu-vertical.menu-collapsed .menu-title > a {
+  display: none;
+}
+.menu-vertical.menu-collapsed .menu-title > a + .fa {
+  display: none;
+}
+.menu-hidden {
+  display: none;
+}
+.menu-drop {
+  position: absolute;
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  top: 100%;
+  left: 0;
+  display: none;
+}
+.menu-drop .divider {
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  background: #d9d9d9;
+}

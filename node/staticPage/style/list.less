@@ -1,0 +1,147 @@
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+
+//   grade  等级
+//   level  水平, 对齐方式
+//   degree  程度，学位
+//   how  怎样
+//   extent  程度，长度
+//////////////////////////////////////////////
+// alignment： 对齐，排列，队列，结盟
+// align：使……成为一条直线，排列
+// aline： 艾琳
+// register： 登录
+
+.inline {
+  display: inline-flex;
+}
+
+.card {
+  margin-top: @interval;
+  background: @listBgColor;
+  border-bottom: 1px solid @borderBmColor;
+}
+
+.title {
+  .title(@color: #fff, @bgColor: #111, @borderColor: #ccc, @height: 40px, @font: @font-md, @between: @between) {
+    font-size: @font;
+    height: @height;
+    line-height: @height;
+    padding: 0 @between;
+    border-bottom: 1px solid @borderColor;
+    background: @bgColor;
+    color: @color;
+  }
+  .title;
+  &-white {
+    .title(#333, @listHeaderBgColor, #ccc, 50px);
+  }
+  &-light-gray {
+    .title(#333, @listHeaderBgColor, #ccc, 50px);
+  }
+  &-gray {
+    .title(#333, @listHeaderBgColor, #ccc, 50px);
+  }
+  &-black {
+    .title(#e6e6e6, #000, #333, 40px);
+  }
+  &-shallow-black {
+    .title(#ccc, #191919, #333, 40px);
+  }
+}
+
+.color(@color1: #000, @color2: #fff, @alpha: 10%) {
+  & {
+    color: mix(@color1, @color2, @alpha);
+  }
+}
+
+.bgColor(@color: #000, @bgColor: #fff, @alpha: 10%) {
+  & {
+    background: mix(@color, @bgColor, @alpha);
+  }
+}
+.list {
+  .list(@color: #ccc, @bgColor: #333, @bdColor: @borderBmColor) {
+    & {
+      width: 100%;
+      display: flex;
+      color: @color;
+      background: @bgColor;
+      padding: 0 10px;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid @bdColor;
+    }
+  }
+  &-row {
+    .list;
+    flex-direction: row;
+  }
+  &-column {
+    .list;
+    flex-direction: column;
+  }
+
+
+
+
+  &-title:not(:last-child) {
+    border-bottom: 1px solid @borderBmColor;
+  }
+  &-content {
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .color(#000, #fff, 40%);
+    .bgColor(#fff, #000, 15%);
+    padding: 10px 20px 10px 70px;
+    dt, dd {
+      display: flex;
+      height: 30px;
+      align-items: center;
+      border-bottom: 1px solid #444;
+    }
+    dt {
+      font-weight: bold;
+      text-align: right;
+    }
+  }
+  &-ctrl {
+    font-size: 14px;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  &-title {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &-text {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .dashed {
+    &-top {
+      border-top: 1px dashed #000;
+    }
+    &-bottom {
+      border-bottom: 1px dashed #000;
+    }
+  }
+}
+
+
+// .height-@{num} {height: @num}
+.generate-height(40);
+.width-400 {
+  width: 400px;
+}
+.width-300 {
+  width: 300px;
+}
+.generate-width(20);
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="./javascripts/lib.js"></script>
+  <script src="./javascripts/timesheet.js"></script>
+  <script src="./javascripts/main.js"></script>
+  <link rel="stylesheet" href="./stylesheets/all-65c9e5e3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen+Mono:400,600,800">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika+Negative:300,400,600,700">
+</head>
+<body class="black">
+<div class="box">
+<div class="box-inner">
+<div class="timesheet-default"></div>
+  <div id="timesheet"></div>
+</div>
+</div>
+
+</body>
+<script>
+  new Timesheet('timesheet', 2002, 2013, [
+    ['2002', '09/2002', 'A freaking awesome time', 'lorem'],
+    ['06/2002', '09/2003', 'Some great memories', 'ipsum'],
+    ['2003', 'Had very bad luck'],
+    ['10/2003', '2006', 'At least had fun', 'dolor'],
+    ['02/2005', '05/2006', 'Enjoyed those times as well', 'ipsum'],
+    ['07/2005', '09/2005', 'Bad luck again', 'default'],
+    ['10/2005', '2008', 'For a long time nothing happened', 'dolor'],
+    ['01/2008', '05/2009', 'LOST Season #4', 'lorem'],
+    ['01/2009', '05/2009', 'LOST Season #4', 'lorem'],
+    ['02/2010', '05/2010', 'LOST Season #5', 'lorem'],
+    ['09/2008', '06/2010', 'FRINGE #1 & #2', 'ipsum']
+  ]);
+</script>
+</html>

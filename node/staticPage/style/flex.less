@@ -1,0 +1,126 @@
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+
+.flex,
+.row,
+.column,
+.flex-top,
+.flex-bottom,
+.flex-left,
+.flex-right,
+.flex-center,
+.justify-center,
+.align-center {
+  display: flex;
+}
+// 指定上下对齐方式
+.align() {
+  &[align=top] {
+    align-items: flex-start;
+  }
+  &[align=center] {
+    align-items: center;
+  }
+  &[align=bottom] {
+    align-items: flex-end;
+  }
+  &[justify=left] {
+    justify-content: flex-start;
+  }
+  &[justify=center] {
+    justify-content: center;
+  }
+  &[justify=right] {
+    justify-content: flex-end;
+  }
+  &[align-flex=center] {
+    align-items: center;
+    justify-content: center;
+  }
+}
+// 指定左右对齐方式
+.content() {
+  &[data-content=start] {
+    align-content: flex-start;
+  }
+  &[data-content=end] {
+    align-content: flex-end;
+  }
+  &[data-content=center] {
+    align-content: center;
+  }
+  &[data-content=around] {
+    align-content: space-around;
+  }
+  &[data-content=between] {
+    align-content: space-between;
+  }
+  &[data-content=stretch] {
+    align-content: stretch;
+  }
+}
+
+.row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  .align();
+  .content();
+}
+.column {
+  flex-direction: column;
+  flex-wrap: wrap;
+  .align();
+  .content();
+}
+
+// 对齐方式
+.flex-left {
+  justify-content: flex-start;
+}
+.flex-right {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+
+.flex-top {
+  align-items: flex-start;
+}
+.flex-bottom {
+  align-items: flex-end;
+}
+.align-center {
+  align-items: center;
+}
+
+.left-center {
+  &:extend(.flex-left);
+  align-items: center;
+}
+.right-center {
+  &:extend(.flex-right);
+  align-items: center;
+}
+.top-center {
+  &:extend(.flex-top);
+  justify-content: center;
+}
+.bottom-center {
+  &:extend(.flex-bottom);
+  justify-content: center;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+
+
+.generate-flex(12);

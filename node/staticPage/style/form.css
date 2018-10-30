@@ -1,0 +1,200 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+@keyframes antSlideUpIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+}
+@keyframes antSlideUpOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+  }
+}
+@keyframes antSlideDownIn {
+  0% {
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+  to {
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+}
+@keyframes antSlideDownOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+}
+@keyframes antSlideLeftIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes antSlideLeftOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0.8);
+  }
+}
+@keyframes antSlideRightIn {
+  0% {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes antSlideRightOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0.8);
+  }
+}
+@keyframes antSwingIn {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(0);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+.form-inline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.form-group {
+  width: 100%;
+  margin-top: 10px;
+}
+.form-list {
+  display: flex;
+  flex-direction: row;
+  padding: 0 15px;
+  height: 40px;
+  align-items: center;
+}
+.form-title {
+  white-space: nowrap;
+  margin-right: 10px;
+}
+.form-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 15px;
+}
+.form-item .form-control {
+  flex: 1;
+}
+.form-control {
+  font-size: 14px;
+  height: 2em;
+  line-height: 2em;
+  padding: 0 .6em;
+  border: 1px solid #d9d9d9;
+  border-radius: .4em;
+  width: 100%;
+  transition: ease 1s;
+}
+.form-control:focus {
+  background: #fafafa;
+  border: 1px solid #2777d1;
+  box-shadow: 0 0 3px #4794ec;
+  transition: ease .4s;
+}

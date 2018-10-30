@@ -1,0 +1,46 @@
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+
+
+.nav {
+  &-control {
+
+  }
+  .item() {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: inherit;
+    cursor: pointer;
+    &:first-child {
+      border-top: 1px solid #ccc;
+    }
+  }
+  &-item {
+    .item();
+    &:hover {
+      .opacity(80);
+    }
+    &-blue {
+      .item();
+      color: #fff;
+      border-color: #428bca;
+      background: #428bca;
+      border-bottom: 1px solid #fff;
+      &:hover {
+        background: #4592d4;
+      }
+    }
+    &-red {
+
+    }
+  }
+}
+
+
+

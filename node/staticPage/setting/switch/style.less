@@ -1,0 +1,67 @@
+// 配置文件
+@import "../../style/setting.less";
+@import "../../style/func.less";
+@import "../../style/color.less";
+
+
+div.row {
+  background: #fff;
+}
+
+
+
+
+.switch {
+  display: block;
+  width: 60px;
+  height: 28px;
+  border: 2px solid transparent;
+  background: @Gray-cc;
+  border-radius: 20px;
+  cursor: pointer;
+  &:before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    float: left;
+    border-radius: 24px;
+    background: #fff;
+    transition: ease .4s;
+  }
+  &[data-checked=true] {
+    background:  @Blue;
+    &:before {
+      float: right;
+    }
+  }
+  &[disabled] {
+    background:  @Gray-ea;
+    cursor: default;
+  }
+  &-inner {
+    font-size: 14px;
+    line-height: 24px;
+    width: 30px;
+    height: 24px;
+    text-align: center;
+    float: right;
+    color: #fff;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+  &-sm {
+    width: 40px;
+    height: 20px;
+    &:before {
+      width: 16px;
+      height: 16px;
+    }
+    .switch-inner {
+      font-size: 12px;
+      line-height: 16px;
+      width: 20px;
+      height: 16px;
+    }
+  }
+}

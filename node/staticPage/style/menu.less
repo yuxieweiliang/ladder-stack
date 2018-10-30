@@ -1,0 +1,321 @@
+// 配置文件
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+
+// ant-menu-root ant-menu ant-menu-inline ant-menu-dark
+// ant-menu-root ant-menu ant-menu-vertical ant-menu-dark ant-menu-inline-collapsed
+
+// 公共节点
+.menu {
+  // 跟节点
+  &-root {
+    display: flex;
+  }
+  &-nav {
+    display: flex;
+    flex: 1;
+  }
+  // 水平的
+  &-horizontal {
+    width: 100%;
+    flex-direction: row;
+    border-bottom: 1px solid @Gray-d9;
+    .menu-prev,
+    .menu-next {
+      width: 2em;
+    }
+  }
+
+  // 垂直的
+  &-vertical,
+  &-inline {
+    flex-direction: column;
+    height: 100%;
+    border-right: 1px solid @Gray-d9;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .menu-prev,
+    .menu-next {
+      height: 2em;
+    }
+  }
+}
+
+
+
+.menu-item {
+  position: relative;
+  color: @Gray-6;
+  cursor: pointer;
+
+  // 当前栏目内容
+  .menu-title {
+    display: flex;
+    flex-direction: row;
+    color: inherit;
+    cursor: inherit;
+    margin-right: -1px;
+    transition: ease .4s;
+    > .fa {
+      padding: 1em;
+      cursor: inherit;
+      &:first-child {
+        padding-right: 0;
+      }
+    }
+    a {
+      display: flex;
+      flex: 1;
+      padding-top: .6em;
+      padding-bottom: .6em;
+      padding-right: .6em;
+      white-space: nowrap;
+      color: inherit;
+      cursor: inherit;
+      >.fa {
+        margin: 0 .5em;
+      }
+    }
+    a+.fa {
+      padding: .6em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &:not(.disabled):hover {
+    >.menu-title {
+      color: @Blue;
+      transition: ease .2s;
+    }
+  }
+  &.disabled {
+    cursor: default;
+    color: @Gray-cc;
+  }
+  // 选中
+  &.open {
+    >.menu-title {
+      color: @Blue;
+    }
+    // 子菜单
+    > .menu-hidden {
+      display: block;
+    }
+  }
+}
+
+
+.menu {
+  // 水平的
+  &-horizontal {
+    .menu-nav {
+      flex-direction: row;
+      > .menu-item {
+        border-bottom: 2px solid transparent;
+        margin-bottom: -1px;
+        .menu-title {
+          a {
+            padding-left: 1em;
+            padding-right: 1em;
+          }
+        }
+        &.open {
+          margin-bottom: 1px;
+          // 当前
+          > .menu-title {
+            color: @Blue;
+            a {
+              color: inherit;
+            }
+            .fa-angle-down {
+              color: inherit;
+              transform: rotate(180deg);
+              transition: ease .4s;
+            }
+          }
+          .menu-drop {
+            display: block;
+            width: 100%;
+            dt {
+              padding-left: 1.2em;
+            }
+            dd {
+              padding-left: 2.4em;
+            }
+          }
+        }
+
+        &:not(.disabled):hover {
+          border-bottom: 2px solid @Blue;
+          .menu-drop {
+            display: block;
+            width: 100%;
+            dt {
+              padding-left: 1.2em;
+            }
+            dd {
+              padding-left: 2.4em;
+            }
+          }
+        }
+        &.active {
+          border-bottom: 2px solid @Blue;
+        }
+      }
+      .menu-hidden {
+        .menu-item {
+          a {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+  // 垂直的
+  &-vertical,
+  &-inline {
+    .menu-nav {
+      flex-direction: column;
+      .menu-item {
+        >.menu-title {
+          border-right: 2px solid transparent;
+          margin-right: -1px;
+          >.fa-angle-down,
+          >.fa-sort-down {
+            transform: rotate(0deg);
+            transition: ease .4s;
+          }
+        }
+        &.open {
+
+          >.menu-title {
+            border-right: 2px solid transparent;
+            margin-right: -1px;
+            >.fa-angle-down,
+            >.fa-sort-down {
+              transform: rotate(180deg);
+              transition: ease .4s;
+            }
+          }
+          >.menu-hidden {
+            padding-left: 2em;
+          }
+        }
+      }
+      // 仅第一层样式
+      >.menu-item {
+        > .menu-title {
+          a {
+            padding-left: 1em;
+          }
+          .fa+a {
+            padding-left: .5em;
+          }
+        }
+        &.open {
+          >.menu-hidden {
+            padding-left: 2em;
+          }
+          &:hover {
+            > .menu-title {
+              color: @Blue;
+            }
+          }
+
+          .active {
+            > .menu-title {
+              color: @Blue;
+              //background-color: lighten(@Blue, 44%);
+              border-right: 2px solid @Blue;
+            }
+            &:hover {
+              > .menu-title {
+                color: @Blue;
+              }
+            }
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+
+
+
+
+  // 垂直的 只显示图标
+  &-vertical {
+    .menu-item {
+      &:not(.disabled):hover {
+        >.menu-sub {
+          display: block;
+          min-width: 160px;
+          width: auto;
+          dt {
+            padding-left: 1.2em;
+          }
+          dd {
+            padding-left: 2.4em;
+          }
+        }
+      }
+    }
+    .fa-angle-down {
+      transform: rotate(-90deg);
+    }
+    .active {
+      .fa-angle-down {
+        transform: rotate(-90deg);
+      }
+    }
+    .menu-sub {
+      .create-drop();
+      display: none;
+      top: 0;
+      left: calc(~'100% + 4px');
+      .menu-item {
+        a,.fa-angle-down {
+          padding: 1em;
+        }
+      }
+    }
+    // 垂直的 只显示图标
+    &.menu-collapsed {
+      width: 3em;
+      .menu-title {
+        >a {
+          display: none;
+          &+.fa {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+// ant-menu ant-menu-horizontal ant-menu-light ant-menu-root
+
+.menu-hidden {
+  display: none;
+}
+.menu-drop {
+  .create-drop();
+  top: 100%;
+  left: 0;
+  display: none;
+  .divider {
+    height: 1px;
+    padding: 0;
+    margin: 0;
+    background: @Gray-d9;
+  }
+}

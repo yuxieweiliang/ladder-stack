@@ -1,0 +1,7 @@
+webpack
+
+  # 显示进度条
+--progress
+
+  # 监视文件更改
+--watch

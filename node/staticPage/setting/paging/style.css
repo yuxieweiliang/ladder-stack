@@ -1,0 +1,144 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+.paging-item,
+.paging-prev,
+.paging-next,
+.paging-jump-prev,
+.paging-jump-next {
+  cursor: pointer;
+  color: #999;
+  border-radius: 4px;
+  list-style: none;
+  min-width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  display: inline-block;
+  vertical-align: middle;
+}
+.paging-item a,
+.paging-prev a,
+.paging-next a,
+.paging-jump-prev a,
+.paging-jump-next a {
+  background-color: #fff;
+  border-radius: 4px;
+  outline: none;
+  display: block;
+  width: inherit;
+  height: inherit;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: inherit;
+  user-select: none;
+}
+.paging-item a:hover,
+.paging-prev a:hover,
+.paging-next a:hover,
+.paging-jump-prev a:hover,
+.paging-jump-next a:hover {
+  color: #368ed2;
+}
+.paging {
+  font-size: 12px;
+}
+.paging-item a {
+  border: 1px solid #d9d9d9;
+}
+.paging-item a:hover {
+  border-color: #368ed2;
+}
+.paging-prev .paging-item-link,
+.paging-next .paging-item-link {
+  border: 1px solid #d9d9d9;
+}
+.paging-prev .paging-item-link:hover,
+.paging-next .paging-item-link:hover {
+  border-color: #368ed2;
+}
+.paging-prev[disabled] a,
+.paging-next[disabled] a {
+  color: #e7e7e7;
+  cursor: default;
+}
+.paging-prev[disabled] a:hover,
+.paging-next[disabled] a:hover {
+  color: #e7e7e7;
+  border-color: #e7e7e7;
+}
+.paging-jump-prev a,
+.paging-jump-next a {
+  position: relative;
+}
+.paging-jump-prev a:before,
+.paging-jump-next a:before {
+  font-weight: bold;
+  content: '···';
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.paging-jump-prev a:hover:before,
+.paging-jump-next a:hover:before {
+  left: 0;
+  font-weight: normal;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.paging-jump-prev a:hover:before {
+  content: '<<';
+}
+.paging-jump-next a:hover:before {
+  content: '>>';
+}
+.paging > li + li {
+  margin-left: 5px;
+}
+.paging-item.paging-active a {
+  color: #fefdfc;
+  background: #368ed2;
+}

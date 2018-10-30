@@ -1,0 +1,100 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+.operation {
+  background: #eee;
+}
+.operation-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 5px;
+  background: #fff;
+}
+.operation-list:not(:first-child) {
+  border-top: 1px solid #ccc;
+}
+.operation-list .operation-header {
+  border-bottom: 1px solid #eee;
+  padding: 0 10px;
+}
+.operation-title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 14px;
+  margin: 0;
+  padding: 13px 12px 13px 0;
+  color: #1468c6;
+}
+.operation-header,
+.operation-body {
+  display: flex;
+}
+.operation-body {
+  flex-wrap: wrap;
+}
+.operation-body .operation-list {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.operation-body .operation-title {
+  color: #666;
+}
+.operation-body .radio {
+  margin: 10px;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.operation-body .radio + .radio {
+  margin: 10px;
+}
+.operation-body .checkbox {
+  margin: 10px;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.operation-body .checkbox + .checkbox {
+  margin: 10px;
+}
+.operation-sub {
+  width: 50%;
+  padding: 4px 0 4px 5px;
+}

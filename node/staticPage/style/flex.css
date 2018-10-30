@@ -1,0 +1,335 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+@keyframes antSlideUpIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+}
+@keyframes antSlideUpOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+  }
+}
+@keyframes antSlideDownIn {
+  0% {
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+  to {
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+}
+@keyframes antSlideDownOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+}
+@keyframes antSlideLeftIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes antSlideLeftOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0.8);
+  }
+}
+@keyframes antSlideRightIn {
+  0% {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes antSlideRightOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0.8);
+  }
+}
+@keyframes antSwingIn {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(0);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+.flex,
+.row,
+.column,
+.flex-top,
+.flex-bottom,
+.flex-left,
+.flex-right,
+.flex-center,
+.justify-center,
+.align-center,
+.left-center,
+.right-center,
+.top-center,
+.bottom-center {
+  display: flex;
+}
+.row {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.row[align=top] {
+  align-items: flex-start;
+}
+.row[align=center] {
+  align-items: center;
+}
+.row[align=bottom] {
+  align-items: flex-end;
+}
+.row[justify=left] {
+  justify-content: flex-start;
+}
+.row[justify=center] {
+  justify-content: center;
+}
+.row[justify=right] {
+  justify-content: flex-end;
+}
+.row[align-flex=center] {
+  align-items: center;
+  justify-content: center;
+}
+.row[data-content=start] {
+  align-content: flex-start;
+}
+.row[data-content=end] {
+  align-content: flex-end;
+}
+.row[data-content=center] {
+  align-content: center;
+}
+.row[data-content=around] {
+  align-content: space-around;
+}
+.row[data-content=between] {
+  align-content: space-between;
+}
+.row[data-content=stretch] {
+  align-content: stretch;
+}
+.column {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.column[align=top] {
+  align-items: flex-start;
+}
+.column[align=center] {
+  align-items: center;
+}
+.column[align=bottom] {
+  align-items: flex-end;
+}
+.column[justify=left] {
+  justify-content: flex-start;
+}
+.column[justify=center] {
+  justify-content: center;
+}
+.column[justify=right] {
+  justify-content: flex-end;
+}
+.column[align-flex=center] {
+  align-items: center;
+  justify-content: center;
+}
+.column[data-content=start] {
+  align-content: flex-start;
+}
+.column[data-content=end] {
+  align-content: flex-end;
+}
+.column[data-content=center] {
+  align-content: center;
+}
+.column[data-content=around] {
+  align-content: space-around;
+}
+.column[data-content=between] {
+  align-content: space-between;
+}
+.column[data-content=stretch] {
+  align-content: stretch;
+}
+.flex-left,
+.left-center {
+  justify-content: flex-start;
+}
+.flex-right,
+.right-center {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.flex-top,
+.top-center {
+  align-items: flex-start;
+}
+.flex-bottom,
+.bottom-center {
+  align-items: flex-end;
+}
+.align-center {
+  align-items: center;
+}
+.left-center {
+  align-items: center;
+}
+.right-center {
+  align-items: center;
+}
+.top-center {
+  justify-content: center;
+}
+.bottom-center {
+  justify-content: center;
+}
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-12 {
+  flex: 12;
+}
+.flex-11 {
+  flex: 11;
+}
+.flex-10 {
+  flex: 10;
+}
+.flex-9 {
+  flex: 9;
+}
+.flex-8 {
+  flex: 8;
+}
+.flex-7 {
+  flex: 7;
+}
+.flex-6 {
+  flex: 6;
+}
+.flex-5 {
+  flex: 5;
+}
+.flex-4 {
+  flex: 4;
+}
+.flex-3 {
+  flex: 3;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-1 {
+  flex: 1;
+}

@@ -1,0 +1,142 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+.nav-item {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: inherit;
+  cursor: pointer;
+}
+.nav-item:first-child {
+  border-top: 1px solid #ccc;
+}
+.nav-item:hover {
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+.nav-item-blue {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: inherit;
+  cursor: pointer;
+  color: #fff;
+  border-color: #428bca;
+  background: #428bca;
+  border-bottom: 1px solid #fff;
+}
+.nav-item-blue:first-child {
+  border-top: 1px solid #ccc;
+}
+.nav-item-blue:hover {
+  background: #4592d4;
+}
+.time-sheet {
+  width: 100%;
+  padding-top: 40px;
+  position: relative;
+  background: #333;
+}
+.time-scale {
+  padding-left: 200px;
+  position: absolute;
+  top: 0;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.time-scale .time-axis,
+.time-scale .time-scale-item {
+  display: flex;
+  flex-direction: row;
+}
+.time-scale .time-axis section,
+.time-scale .time-scale-item section {
+  display: flex;
+  font-size: 12px;
+  color: #fff;
+  flex: 1;
+  height: 100%;
+  border-left: 1px dashed rgba(0, 0, 0, 0.5);
+}
+.time-scale .time-axis {
+  height: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.time-scale .time-axis .axis-item {
+  flex: 1;
+  height: 30%;
+  width: 20%;
+  border-right: 1px solid #ccc;
+}
+.time-scale .time-scale-item {
+  flex: 1;
+}
+.time-content {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.time-content .time-axis-x {
+  display: flex;
+  flex-direction: row;
+  height: 8px;
+  width: 100%;
+  border-radius: 10px;
+}
+.time-content .time-axis-x span {
+  display: inline-block;
+  width: 200px;
+  height: inherit;
+  border-radius: inherit;
+  background: #00aaff;
+}

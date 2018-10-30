@@ -1,0 +1,202 @@
+// 配置文件
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+
+//  popover popover-topLeft
+.box {
+  position: relative;
+}
+
+/**
+  triangle
+*/
+
+.delta(@target: popover) {
+  position: absolute;
+  color: @Gray-6;
+  z-index: 1030;
+  cursor: auto;
+  width: min-content;
+  user-select: text;
+  white-space: normal;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: left;
+  background-clip: padding-box;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+  padding: 10px 15px;
+}
+.arrow {
+  position: absolute;
+  display: block;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent;
+  z-index: 9999;
+
+  border-top-width: 0;
+  border-bottom-color: hsla(0,0%,85%,.7);
+  &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent;
+    z-index: 9999;
+
+    top: 1px;
+    border-top-width: 0;
+    border-bottom-color: #fff;
+    margin-left: -5px;
+  }
+}
+
+
+.popover {
+  .delta(popover);
+  background-color: #fff;
+  .popover-arrow {
+    &:extend(.arrow all);
+  }
+  .popover-content {
+    white-space: nowrap;
+    .popover-message {
+      padding: 10px;
+      text-align: center;
+      user-select: text;
+      cursor: auto;
+    }
+    .popover-btn {
+      .btn-sm {
+        font-size: 12px;
+        padding: 2px 10px;
+      }
+    }
+  }
+}
+
+//  ant-tooltip  ant-tooltip-placement-topLeft  ant-tooltip-hidden
+
+
+.tooltip {
+  .delta(tooltip);
+  color: @Gray-ea;
+  background-color: rgba(0, 0, 0, 75%);
+  .tooltip-arrow {
+    &:extend(.arrow);
+    border-bottom-color: rgba(0, 0, 0, 75%);
+  }
+  .tooltip-content {
+    white-space: nowrap;
+  }
+}
+
+
+.pop-left() {
+  transform: rotate(-90deg);
+  left: -9px;
+  margin-top: -3px;
+  margin-left: 0;
+}
+.pop-right() {
+  transform: rotate(90deg);
+  right: -9px;
+  margin-bottom: -3px;
+  margin-left: 0;
+}
+.pop-top() {
+  top: -6px;
+  margin-left: -6px;
+}
+.pop-bottom() {
+  transform: rotate(180deg);
+  bottom: -6px;
+  margin-right: -6px;
+}
+
+
+.create-arrow(@tar, @range) {
+  .@{tar} {
+    &.@{tar}-leftBottom {
+      .@{tar}-arrow {
+        .pop-left();
+        top: extract(@range, 3);
+      }
+    }
+    &.@{tar}-left {
+      .@{tar}-arrow {
+        .pop-left();
+        top: extract(@range, 2);
+      }
+    }
+    &.@{tar}-leftTop {
+      .@{tar}-arrow {
+        .pop-left();
+        top: extract(@range, 1);
+      }
+    }
+    &.@{tar}-topLeft {
+      .@{tar}-arrow {
+        .pop-top();
+        left: extract(@range, 4);
+      }
+    }
+    &.@{tar}-top {
+      .@{tar}-arrow {
+        .pop-top();
+        left: extract(@range, 5);
+      }
+    }
+    &.@{tar}-topRight {
+      .@{tar}-arrow {
+        .pop-top();
+        left: extract(@range, 6);
+      }
+
+    }
+    &.@{tar}-rightTop {
+      .@{tar}-arrow {
+        .pop-right();
+        bottom: extract(@range, 1);
+      }
+    }
+    &.@{tar}-right {
+      .@{tar}-arrow {
+        .pop-right();
+        bottom: extract(@range, 2);
+      }
+    }
+    &.@{tar}-rightBottom {
+      .@{tar}-arrow {
+        .pop-right();
+        bottom: extract(@range, 3);
+      }
+    }
+    &.@{tar}-bottomRight {
+      .@{tar}-arrow {
+        .pop-bottom();
+        right: extract(@range, 4);
+      }
+    }
+    &.@{tar}-bottom {
+      .@{tar}-arrow {
+        .pop-bottom();
+        right: extract(@range, 5);
+      }
+    }
+    &.@{tar}-bottomLeft {
+      .@{tar}-arrow {
+        .pop-bottom();
+        right: extract(@range, 6);
+      }
+    }
+  }
+}
+@popover: 25%, 50%, 75%, 25%, 50%, 75%;
+@tooltip: 33%, 50%, 66%, 20%, 50%, 80%;
+.create-arrow(popover, @popover);
+.create-arrow(tooltip, @tooltip);

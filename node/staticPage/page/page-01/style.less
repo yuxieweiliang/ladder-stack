@@ -1,0 +1,100 @@
+// 配置文件
+@import "../../style/setting";
+@import "../../style/func";
+@import "../../style/color";
+
+.content {
+  font-size: 14px;
+}
+
+
+.user-information {
+  // background: #f2f2f2;
+}
+
+.time {
+  &-sheet {
+    width: 100%;
+    padding-top: 40px;
+    position: relative;
+    background: #333;
+  }
+  &-scale {
+    padding-left: 200px;
+    position: absolute;
+    top: 0;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    .time-axis,
+    .time-scale-item {
+      display: flex;
+      flex-direction: row;
+      section {
+        display: flex;
+        font-size: 12px;
+        color: #fff;
+        flex: 1;
+        height: 100%;
+        border-left: 1px dashed rgba(0, 0, 0, .5);
+      }
+    }
+    .time-axis {
+      height: 20px;
+      border-bottom: 1px solid #ccc;
+      .axis-item {
+        flex: 1;
+        height: 30%;
+        width: 20%;
+        border-right: 1px solid #ccc;
+      }
+    }
+    .time-scale-item {
+      flex: 1;
+    }
+  }
+  &-content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    .time-axis-x {
+      display: flex;
+      flex-direction: row;
+      height: 8px;
+      width: 100%;
+      border-radius: 10px;
+      span {
+        display: inline-block;
+        width: 200px;
+        height: inherit;
+        border-radius: inherit;
+        background: #00aaff;
+      }
+    }
+  }
+}
+
+
+
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &-sm {
+    &:extend(.list);
+    height: 30px;
+  }
+  &-md {
+    &:extend(.list);
+    height: 40px;
+  }
+  &-lg {
+    &:extend(.list);
+    height: 50px;
+  }
+}
+

@@ -1,0 +1,81 @@
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+
+.btn {
+  position: relative;
+  font-size: 14px;
+  display: inline-block;
+  height: 2em;
+  padding: 0 1em;
+  line-height: 1.8em;
+
+  border-radius: .3em;
+
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+
+  cursor: pointer;
+  outline: none;
+  user-select: none;  ///元素内的文字及其子元素将不会被选中.
+  touch-action: manipulation;  ///  浏览器只允许进行滚动和持续缩放操作。任何其它被auto值支持的行为不被支持。
+  transition: .5s ease;
+
+  border: 1px solid transparent;
+
+  &+.btn {
+    margin-left: 5px;
+  }
+  &-xs {
+    font-size: 12px;
+  }
+  &-sm {
+    font-size: 14px;
+  }
+  &-md {
+    font-size: 18px;
+  }
+  &-lg {
+    font-size: 20px;
+  }
+  &-default {
+    color: @Gray-6;
+    border: 1px solid @Gray-d9;
+    background: @Gray-fa;
+    &:hover {
+      color: @Blue;
+      border-color: @Blue;
+    }
+  }
+  .disabled {
+    &[disabled] {
+      color: #999;
+      background-color: #ddd;
+      border: 1px solid transparent;
+      cursor: not-allowed;
+    }
+  }
+
+  .disabled-line {
+    &[disabled] {
+      color: #ccc;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  .disabled-dashed {
+    &[disabled] {
+      color: #ccc;
+      background-color: #fff;
+      border: 1px dashed #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  .create-btn(length(@btn));
+}
+
+

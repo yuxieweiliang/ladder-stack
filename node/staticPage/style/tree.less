@@ -1,0 +1,127 @@
+// 配置文件
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+
+//  popover popover-topLeft
+.box {
+  position: relative;
+}
+.main {
+  background: @White;
+}
+
+/**
+  tree
+*/
+
+
+.create-tree-icon() {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: @White;
+  z-index: 1;
+}
+
+.tree {
+  color: @Gray-6;
+  font-size: 14px;
+  .tree-list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    .tree-switcher {
+      display: flex;
+      text-align: center;
+      padding: 3px 0;
+
+      .fa-caret-right {
+        transition: ease .4s;
+      }
+      .tree-icon {
+        .create-tree-icon();
+        justify-content: center;
+        width: 24px;
+        cursor: pointer;
+        &:hover {
+          color: @Gray-3;
+        }
+      }
+      .tree-list-title {
+        .create-tree-icon();
+        padding: 4px 6px; // 控制行高
+        cursor: pointer;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        color: inherit;
+        &:visited,
+        &:active,
+        &.active,
+        &:hover {
+          background: lighten(@Blue, 44%);
+          color: @Blue;
+        }
+      }
+    }
+    .tree-content {
+      padding-left: 20px;
+      display: none;
+    }
+    &.open {
+      >.tree-switcher {
+        .fa-caret-right {
+          transition: ease .4s;
+          transform: rotate(90deg)
+        }
+      }
+      >.tree-content {
+        display: block;
+      }
+    }
+  }
+  &.tree-show-line {
+    .tree-list:not(:last-child):before {
+      position: absolute;
+      height: 100%;
+      top: 3px;
+      left: 12px;
+      content: '';
+      width: 1px;
+      background: #ccc;
+    }
+  }
+  &.tree-color {
+    .tree-list {
+      &.open {
+        >.tree-switcher {
+          >.tree-list-title {
+            color: @Blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

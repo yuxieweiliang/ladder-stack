@@ -1,0 +1,126 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+div.row {
+  background: #fff;
+}
+.alert-danger {
+  padding: .8em;
+  color: #d85867;
+  background: #ffe3e7;
+  border: 1px solid #ffcad0;
+  border-radius: 4px;
+}
+.popup,
+.popup,
+.popup-center,
+.popup-center {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.popup,
+.popup-center {
+  /**
+   * 提示框
+   */
+}
+.popup-container {
+  position: absolute;
+  width: 600px;
+}
+.popup-container .popup-content {
+  position: relative;
+  background: #fff;
+  margin-top: -100px;
+  border: 1px solid #f2f2f2;
+  border-radius: 6px;
+}
+.popup-container .popup-content .popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.popup-container .popup-content .popup-header .popup-title h2 {
+  font-size: 16px;
+}
+.popup-container .popup-content .popup-header .popup-close .fa-close {
+  color: #999;
+  cursor: pointer;
+  transition: ease .4s;
+}
+.popup-container .popup-content .popup-header .popup-close .fa-close:hover {
+  color: #d85867;
+}
+.popup-container .popup-content .popup-body {
+  padding: 0 15px;
+}
+.popup-container .popup-content .popup-btn {
+  padding: 15px;
+  text-align: right;
+}
+.popup-top .popup-container {
+  top: 25%;
+}
+.popup-bottom .popup-container {
+  bottom: 25%;
+}
+.popup.popup-sm .popup-container {
+  width: 400px;
+}
+.popup.popup-lg .popup-container {
+  width: 800px;
+}
+.popup.popup-alert .popup-body {
+  text-align: center;
+  padding: 35px 15px 25px 15px;
+}
+.popup-mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}

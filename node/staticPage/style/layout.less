@@ -1,0 +1,189 @@
+// 配置文件
+@import "./animation.less";
+@import "./color.less";
+@import "./func.less";
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/**
+  layout
+*/
+
+@header: 70px, @Blue;
+@footer: 100px, @Blue;
+@aside: 300px, @Gray-f2;
+
+.layout {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  /*display: flex;
+  flex-direction: column;*/
+  &-header {
+    width: 100%;
+    height: extract(@header, 1);
+    background: extract(@header, 2);
+  }
+  &-content {
+    @height: extract(@header, 1) + extract(@footer, 1);
+    height: calc(~'100% -' @height);
+    padding: 0;
+    padding-bottom: extract(@footer, 1);
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  &-aside {
+    float: left;
+    height: 100%;
+    width: extract(@aside, 1);
+    background: extract(@aside, 2);
+    &:first-child {
+      float: left;
+    }
+  }
+  &-subject {
+    position: relative;
+    float: left;
+    @width: extract(@aside, 1);
+    width: calc(~'100%  - ' @width);
+    height: 100%;
+    .layout-content {
+      padding: 0;
+    }
+  }
+
+  &-aside+&-subject,
+  &-subject+&-aside {
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  &-footer {
+    @top: extract(@footer, 1);
+    position: absolute;
+    bottom: 0;
+    margin-top: -@top;
+    width: 100%;
+    height: extract(@footer, 1);
+    background: extract(@header, 2);
+  }
+
+  /*  fixed   */
+  &-fixed-header {
+    padding-top: extract(@header, 1);
+    .layout-header {
+      position: fixed;
+      top: 0;
+    }
+    .layout-content {
+      padding-bottom: extract(@footer, 1);
+    }
+  }
+
+  /*  -content-scroll   */
+  &-content-scroll {
+    max-height: 100%;
+    height: 100%;
+    .layout-subject,
+    .layout-aside,
+    .layout-content {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .layout-content {
+      padding: 0;
+    }
+    &.hidden-aside {
+      > .layout-subject {
+        width: 100%;
+      }
+      > .layout-aside {
+        display: none;
+      }
+    }
+  }
+
+  &-static {
+    max-height: 100%;
+    height: 100%;
+    overflow: hidden;
+    .layout-subject,
+    .layout-aside,
+    .layout-content {
+      overflow: hidden;
+    }
+    .layout-content {
+      padding: 0;
+    }
+    &.hidden-aside {
+      > .layout-subject {
+        width: 100%;
+      }
+      > .layout-aside {
+        display: none;
+      }
+    }
+  }
+  &-scroll {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+
+.pie {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.pie {
+  &-row {
+    &:extend(.pie);
+    flex-direction: row;
+    overflow: hidden;
+  }
+  &-column {
+    &:extend(.pie);
+    overflow: hidden;
+    &-scroll {
+      flex-direction: column;
+    }
+  }
+  &-content {
+    flex: 1;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  &-aside {
+    overflow: hidden;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

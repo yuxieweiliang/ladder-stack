@@ -1,0 +1,236 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+@keyframes antSlideUpIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+}
+@keyframes antSlideUpOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+  }
+}
+@keyframes antSlideDownIn {
+  0% {
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+  to {
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+}
+@keyframes antSlideDownOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+}
+@keyframes antSlideLeftIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes antSlideLeftOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0.8);
+  }
+}
+@keyframes antSlideRightIn {
+  0% {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes antSlideRightOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0.8);
+  }
+}
+@keyframes antSwingIn {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(0);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+.box {
+  position: relative;
+}
+.main {
+  background: #fefdfc;
+}
+/**
+  tree
+*/
+.tree {
+  color: #666;
+  font-size: 14px;
+}
+.tree .tree-list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.tree .tree-list .tree-switcher {
+  display: flex;
+  text-align: center;
+  padding: 3px 0;
+}
+.tree .tree-list .tree-switcher .fa-caret-right {
+  transition: ease .4s;
+}
+.tree .tree-list .tree-switcher .tree-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fefdfc;
+  z-index: 1;
+  justify-content: center;
+  width: 24px;
+  cursor: pointer;
+}
+.tree .tree-list .tree-switcher .tree-icon:hover {
+  color: #333;
+}
+.tree .tree-list .tree-switcher .tree-list-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fefdfc;
+  z-index: 1;
+  padding: 4px 6px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  color: inherit;
+}
+.tree .tree-list .tree-switcher .tree-list-title:visited,
+.tree .tree-list .tree-switcher .tree-list-title:active,
+.tree .tree-list .tree-switcher .tree-list-title.active,
+.tree .tree-list .tree-switcher .tree-list-title:hover {
+  background: #edf5fb;
+  color: #368ed2;
+}
+.tree .tree-list .tree-content {
+  padding-left: 20px;
+  display: none;
+}
+.tree .tree-list.open > .tree-switcher .fa-caret-right {
+  transition: ease .4s;
+  transform: rotate(90deg);
+}
+.tree .tree-list.open > .tree-content {
+  display: block;
+}
+.tree.tree-show-line .tree-list:not(:last-child):before {
+  position: absolute;
+  height: 100%;
+  top: 3px;
+  left: 12px;
+  content: '';
+  width: 1px;
+  background: #ccc;
+}
+.tree.tree-color .tree-list.open > .tree-switcher > .tree-list-title {
+  color: #368ed2;
+}

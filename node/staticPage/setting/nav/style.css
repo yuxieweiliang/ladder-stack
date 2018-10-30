@@ -1,0 +1,467 @@
+/**
+ * global
+ */
+/**
+ * list page
+ */
+/**
+ * 创建高度
+ * .height-@{num} { height: @num }
+ * -> .height-100 { height: 100px }
+ */
+/**
+ * 创建宽度
+ * .width-@{num} { width: @num }
+ * -> .width-100 { width: 100px }
+ */
+/**
+ * flex 布局
+ * .flex-@{num} {flex: @num} -> .flex-1{ flex: 1 }
+ */
+/**
+ * 透明度
+ * 需要传入 透明度多少
+ */
+/**
+ * 边框
+ * 需要传入 方向，颜色，大小
+ */
+/**
+ * 投影效果
+ * 需要传入 影子颜色，大小
+ */
+/**
+ * hover效果
+ * 需要传入 没有hover的颜色值，与hover时的颜色值
+ */
+/**
+ * 创建按钮
+ * 需要传入一个二维数组
+ */
+.nav-tabs {
+  width: 100%;
+  display: flex;
+}
+.nav-tabs.nav-line .menu-list,
+.nav-tabs.nav-line a[role=menuitem] {
+  margin-right: 0 !important;
+}
+.nav-tabs.nav-line .menu-list:not(.active),
+.nav-tabs.nav-line a[role=menuitem]:not(.active) {
+  border: 1px solid #d9d9d9;
+}
+.nav-tabs.nav-line .menu-list:not(:last-child),
+.nav-tabs.nav-line a[role=menuitem]:not(:last-child) {
+  border-right: 0;
+}
+.nav-tabs .menu-list,
+.nav-tabs [role=menuitem] {
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nav-tabs .menu-list > a,
+.nav-tabs [role=menuitem] > a {
+  color: inherit;
+  display: inline-block;
+  padding: .6em;
+  cursor: inherit;
+}
+.nav-tabs .menu-list:not(:last-child),
+.nav-tabs [role=menuitem]:not(:last-child) {
+  margin-right: 1px;
+}
+.nav-tabs .menu-list:first-child,
+.nav-tabs [role=menuitem]:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.nav-tabs .menu-list:last-child,
+.nav-tabs [role=menuitem]:last-child {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.nav-tabs .menu-list.active,
+.nav-tabs [role=menuitem].active {
+  color: #fefdfc;
+  background: #368ed2;
+}
+.nav-tabs .menu-list.disabled,
+.nav-tabs [role=menuitem].disabled {
+  cursor: not-allowed;
+}
+.nav-tabs .menu-list:not(.active):not(.disabled) > a:focus,
+.nav-tabs [role=menuitem]:not(.active):not(.disabled) > a:focus,
+.nav-tabs .menu-list:not(.active):not(.disabled) > a:hover,
+.nav-tabs [role=menuitem]:not(.active):not(.disabled) > a:hover {
+  background: #eee;
+}
+.nav-tabs-row {
+  flex-direction: row;
+}
+.nav-tabs nav {
+  display: flex;
+  flex-direction: row;
+}
+.nav-tabs nav.nav-line .menu-list,
+.nav-tabs nav.nav-line a[role=menuitem] {
+  margin-right: 0 !important;
+}
+.nav-tabs nav.nav-line .menu-list:not(.active),
+.nav-tabs nav.nav-line a[role=menuitem]:not(.active) {
+  border: 1px solid #d9d9d9;
+}
+.nav-tabs nav.nav-line .menu-list:not(:last-child),
+.nav-tabs nav.nav-line a[role=menuitem]:not(:last-child) {
+  border-right: 0;
+}
+.nav-tabs nav .menu-list,
+.nav-tabs nav [role=menuitem] {
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nav-tabs nav .menu-list > a,
+.nav-tabs nav [role=menuitem] > a {
+  color: inherit;
+  display: inline-block;
+  padding: .6em;
+  cursor: inherit;
+}
+.nav-tabs nav .menu-list:not(:last-child),
+.nav-tabs nav [role=menuitem]:not(:last-child) {
+  margin-right: 1px;
+}
+.nav-tabs nav .menu-list:first-child,
+.nav-tabs nav [role=menuitem]:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.nav-tabs nav .menu-list:last-child,
+.nav-tabs nav [role=menuitem]:last-child {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.nav-tabs nav .menu-list.active,
+.nav-tabs nav [role=menuitem].active {
+  color: #fefdfc;
+  background: #368ed2;
+}
+.nav-tabs nav .menu-list.disabled,
+.nav-tabs nav [role=menuitem].disabled {
+  cursor: not-allowed;
+}
+.nav-tabs nav .menu-list:not(.active):not(.disabled) > a:focus,
+.nav-tabs nav [role=menuitem]:not(.active):not(.disabled) > a:focus,
+.nav-tabs nav .menu-list:not(.active):not(.disabled) > a:hover,
+.nav-tabs nav [role=menuitem]:not(.active):not(.disabled) > a:hover {
+  background: #eee;
+}
+.nav-tabs-column {
+  flex-direction: column;
+  display: flex;
+}
+.nav-tabs-column.nav-line .menu-list,
+.nav-tabs-column.nav-line a[role=menuitem] {
+  margin-bottom: 0 !important;
+}
+.nav-tabs-column.nav-line .menu-list:not(.active),
+.nav-tabs-column.nav-line a[role=menuitem]:not(.active) {
+  border: 1px solid #d9d9d9;
+}
+.nav-tabs-column.nav-line .menu-list:not(:last-child),
+.nav-tabs-column.nav-line a[role=menuitem]:not(:last-child) {
+  border-bottom: 0;
+}
+.nav-tabs-column .menu-list,
+.nav-tabs-column [role=menuitem] {
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nav-tabs-column .menu-list > a,
+.nav-tabs-column [role=menuitem] > a {
+  color: inherit;
+  display: inline-block;
+  padding: .6em;
+  cursor: inherit;
+}
+.nav-tabs-column .menu-list:not(:last-child),
+.nav-tabs-column [role=menuitem]:not(:last-child) {
+  margin-bottom: 1px;
+}
+.nav-tabs-column .menu-list:first-child,
+.nav-tabs-column [role=menuitem]:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.nav-tabs-column .menu-list:last-child,
+.nav-tabs-column [role=menuitem]:last-child {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.nav-tabs-column .menu-list.active,
+.nav-tabs-column [role=menuitem].active {
+  color: #fefdfc;
+  background: #368ed2;
+}
+.nav-tabs-column .menu-list.disabled,
+.nav-tabs-column [role=menuitem].disabled {
+  cursor: not-allowed;
+}
+.nav-tabs-column .menu-list:not(.active):not(.disabled) > a:focus,
+.nav-tabs-column [role=menuitem]:not(.active):not(.disabled) > a:focus,
+.nav-tabs-column .menu-list:not(.active):not(.disabled) > a:hover,
+.nav-tabs-column [role=menuitem]:not(.active):not(.disabled) > a:hover {
+  background: #eee;
+}
+.nav-tabs-column nav {
+  display: flex;
+  flex-direction: column;
+}
+.nav-tabs-column nav.nav-line .menu-list,
+.nav-tabs-column nav.nav-line a[role=menuitem] {
+  margin-bottom: 0 !important;
+}
+.nav-tabs-column nav.nav-line .menu-list:not(.active),
+.nav-tabs-column nav.nav-line a[role=menuitem]:not(.active) {
+  border: 1px solid #d9d9d9;
+}
+.nav-tabs-column nav.nav-line .menu-list:not(:last-child),
+.nav-tabs-column nav.nav-line a[role=menuitem]:not(:last-child) {
+  border-bottom: 0;
+}
+.nav-tabs-column nav .menu-list,
+.nav-tabs-column nav [role=menuitem] {
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nav-tabs-column nav .menu-list > a,
+.nav-tabs-column nav [role=menuitem] > a {
+  color: inherit;
+  display: inline-block;
+  padding: .6em;
+  cursor: inherit;
+}
+.nav-tabs-column nav .menu-list:not(:last-child),
+.nav-tabs-column nav [role=menuitem]:not(:last-child) {
+  margin-bottom: 1px;
+}
+.nav-tabs-column nav .menu-list:first-child,
+.nav-tabs-column nav [role=menuitem]:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.nav-tabs-column nav .menu-list:last-child,
+.nav-tabs-column nav [role=menuitem]:last-child {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.nav-tabs-column nav .menu-list.active,
+.nav-tabs-column nav [role=menuitem].active {
+  color: #fefdfc;
+  background: #368ed2;
+}
+.nav-tabs-column nav .menu-list.disabled,
+.nav-tabs-column nav [role=menuitem].disabled {
+  cursor: not-allowed;
+}
+.nav-tabs-column nav .menu-list:not(.active):not(.disabled) > a:focus,
+.nav-tabs-column nav [role=menuitem]:not(.active):not(.disabled) > a:focus,
+.nav-tabs-column nav .menu-list:not(.active):not(.disabled) > a:hover,
+.nav-tabs-column nav [role=menuitem]:not(.active):not(.disabled) > a:hover {
+  background: #eee;
+}
+.nav-pills .nav-title,
+.nav-pills nav {
+  flex-direction: row;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+}
+.nav-pills .nav-title .menu-list,
+.nav-pills nav .menu-list,
+.nav-pills .nav-title [role=menuitem],
+.nav-pills nav [role=menuitem] {
+  position: relative;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-bottom: -1px;
+}
+.nav-pills .nav-title .menu-list > a,
+.nav-pills nav .menu-list > a,
+.nav-pills .nav-title [role=menuitem] > a,
+.nav-pills nav [role=menuitem] > a {
+  color: inherit;
+  display: inline-block;
+  padding: .6em;
+  cursor: inherit;
+}
+.nav-pills .nav-title .menu-list:not(:last-child),
+.nav-pills nav .menu-list:not(:last-child),
+.nav-pills .nav-title [role=menuitem]:not(:last-child),
+.nav-pills nav [role=menuitem]:not(:last-child) {
+  border-right: 1px solid transparent;
+}
+.nav-pills .nav-title .menu-list.active,
+.nav-pills nav .menu-list.active,
+.nav-pills .nav-title [role=menuitem].active,
+.nav-pills nav [role=menuitem].active {
+  border-bottom: 1px solid transparent;
+}
+.nav-pills .nav-title .menu-list:first-child,
+.nav-pills nav .menu-list:first-child,
+.nav-pills .nav-title [role=menuitem]:first-child,
+.nav-pills nav [role=menuitem]:first-child {
+  border-top-left-radius: 4px;
+}
+.nav-pills .nav-title .menu-list:last-child,
+.nav-pills nav .menu-list:last-child,
+.nav-pills .nav-title [role=menuitem]:last-child,
+.nav-pills nav [role=menuitem]:last-child {
+  border-top-right-radius: 4px;
+}
+.nav-pills .nav-title .menu-list.active,
+.nav-pills nav .menu-list.active,
+.nav-pills .nav-title [role=menuitem].active,
+.nav-pills nav [role=menuitem].active {
+  color: #428bca;
+  background: #eee;
+}
+.nav-pills .nav-title .menu-list.disabled,
+.nav-pills nav .menu-list.disabled,
+.nav-pills .nav-title [role=menuitem].disabled,
+.nav-pills nav [role=menuitem].disabled {
+  cursor: not-allowed;
+}
+.nav-pills .nav-title .menu-list:not(.active):not(.disabled) > a:focus,
+.nav-pills nav .menu-list:not(.active):not(.disabled) > a:focus,
+.nav-pills .nav-title [role=menuitem]:not(.active):not(.disabled) > a:focus,
+.nav-pills nav [role=menuitem]:not(.active):not(.disabled) > a:focus,
+.nav-pills .nav-title .menu-list:not(.active):not(.disabled) > a:hover,
+.nav-pills nav .menu-list:not(.active):not(.disabled) > a:hover,
+.nav-pills .nav-title [role=menuitem]:not(.active):not(.disabled) > a:hover,
+.nav-pills nav [role=menuitem]:not(.active):not(.disabled) > a:hover {
+  background: #eee;
+}
+.nav-pills .nav-title + .nav-content,
+.nav-pills nav + .nav-content,
+.nav-pills .nav-title + section,
+.nav-pills nav + section {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-top: 1px solid transparent;
+  background: #eee;
+}
+.nav-pills-left {
+  display: flex;
+  flex-direction: row;
+}
+.nav-pills-left .nav-title,
+.nav-pills-left nav {
+  flex-direction: column;
+  border-right: 1px solid #ccc;
+  display: flex;
+}
+.nav-pills-left .nav-title .menu-list,
+.nav-pills-left nav .menu-list,
+.nav-pills-left .nav-title [role=menuitem],
+.nav-pills-left nav [role=menuitem] {
+  position: relative;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-right: -1px;
+}
+.nav-pills-left .nav-title .menu-list > a,
+.nav-pills-left nav .menu-list > a,
+.nav-pills-left .nav-title [role=menuitem] > a,
+.nav-pills-left nav [role=menuitem] > a {
+  color: inherit;
+  display: inline-block;
+  padding: .6em;
+  cursor: inherit;
+}
+.nav-pills-left .nav-title .menu-list:not(:last-child),
+.nav-pills-left nav .menu-list:not(:last-child),
+.nav-pills-left .nav-title [role=menuitem]:not(:last-child),
+.nav-pills-left nav [role=menuitem]:not(:last-child) {
+  border-bottom: 1px solid transparent;
+}
+.nav-pills-left .nav-title .menu-list.active,
+.nav-pills-left nav .menu-list.active,
+.nav-pills-left .nav-title [role=menuitem].active,
+.nav-pills-left nav [role=menuitem].active {
+  border-right: 1px solid transparent;
+}
+.nav-pills-left .nav-title .menu-list:first-child,
+.nav-pills-left nav .menu-list:first-child,
+.nav-pills-left .nav-title [role=menuitem]:first-child,
+.nav-pills-left nav [role=menuitem]:first-child {
+  border-top-left-radius: 4px;
+}
+.nav-pills-left .nav-title .menu-list:last-child,
+.nav-pills-left nav .menu-list:last-child,
+.nav-pills-left .nav-title [role=menuitem]:last-child,
+.nav-pills-left nav [role=menuitem]:last-child {
+  border-bottom-left-radius: 4px;
+}
+.nav-pills-left .nav-title .menu-list.active,
+.nav-pills-left nav .menu-list.active,
+.nav-pills-left .nav-title [role=menuitem].active,
+.nav-pills-left nav [role=menuitem].active {
+  color: #428bca;
+  background: #eee;
+}
+.nav-pills-left .nav-title .menu-list.disabled,
+.nav-pills-left nav .menu-list.disabled,
+.nav-pills-left .nav-title [role=menuitem].disabled,
+.nav-pills-left nav [role=menuitem].disabled {
+  cursor: not-allowed;
+}
+.nav-pills-left .nav-title .menu-list:not(.active):not(.disabled) > a:focus,
+.nav-pills-left nav .menu-list:not(.active):not(.disabled) > a:focus,
+.nav-pills-left .nav-title [role=menuitem]:not(.active):not(.disabled) > a:focus,
+.nav-pills-left nav [role=menuitem]:not(.active):not(.disabled) > a:focus,
+.nav-pills-left .nav-title .menu-list:not(.active):not(.disabled) > a:hover,
+.nav-pills-left nav .menu-list:not(.active):not(.disabled) > a:hover,
+.nav-pills-left .nav-title [role=menuitem]:not(.active):not(.disabled) > a:hover,
+.nav-pills-left nav [role=menuitem]:not(.active):not(.disabled) > a:hover {
+  background: #eee;
+}
+.nav-pills-left .nav-title + .nav-content,
+.nav-pills-left nav + .nav-content,
+.nav-pills-left .nav-title + section,
+.nav-pills-left nav + section {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-left: 1px solid transparent;
+  background: #eee;
+}
+.nav-pills-left .nav-content,
+.nav-pills-left nav + section {
+  flex: 1;
+  padding: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc #ccc #ccc transparent;
+  background: #eee;
+}
+.color1 {
+  background: #6ab2f1;
+}
+.color2 {
+  background: #f35656;
+}
+.color3 {
+  background: #efa05e;
+}
+.color4 {
+  background: #55d270;
+}
+.color5 {
+  background: #f2f2f2;
+}

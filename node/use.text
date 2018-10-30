@@ -1,0 +1,126 @@
+git 使用
+
+先删除，再添加
+git remote rm origin
+git remote add origin [url]
+
+
+提交
+git push origin master
+
+
+
+mongodb 使用
+
+将mongodb加入环境变量，
+> mongo  // 进入mongodb
+> db.movies.find() // 查看movies下的所有数据
+
+
+
+cd mong\bin                                      // 切换到mongod.exe目录
+mongod --dbpath E:\00_project\01_node\mong\db    // 用来创建并运行数据库
+
+
+
+
+
+
+data = {
+  user : {u_name, u_age, },
+  book: {b_name, b_size, b_zan, b_tuijian},
+  tool: {t_name, t_used, t_download}
+};
+
+
+
+//  利用这个可以添加数据
+var _movie = new Movie({
+  title: '异形：契约e',
+  director: '雷德利·斯科特',
+  country: '美国',
+  year: 2017,
+  poster: 'https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2167448161.webp',
+  language: '英语',
+  flash: 'http://119.188.38.131/youku/65743530DBB4C838FBA166544F/0300080100585FB87B799839BBD120136343F3-AD4F-8451-FC2A-A9554D727689.mp4?sid=049846040186412f9e92c&ctype=12&ccode=0401&duration=133&expire=18000&psid=599c21659cf2ed62339a7ba955d34987&ups_client_netip=114.240.103.157&ups_ts=1498460401&ups_userid=&utid=LT%2FBEcSPnjsCAXt3LLqrfLyH&vid=XMTg4NTUxNjQ5Ng%3D%3D&vkey=A57113a190f13ec64fa327c44ec8d116e&nk=411351972806_24974340174&ns=0_22165960&special=true',
+  summary:'“科幻之父”雷德利-斯科特将为他所开创的《异形》系列带来新篇章。《异形：契约》的故事发生在《普罗米修斯》10年后，一群新的宇航员乘坐着“契约号”飞船前往遥远的星系寻找殖民地，他们来到一处看似天堂般的星球，实则是黑暗、危险的地狱，在那里他们见到了“普罗米修斯”号唯一的幸存者——由迈克尔·法斯宾德饰演的生化人大卫，一场毁灭性的巨大灾难即将到来。'
+});
+
+_movie.save(function(error, movie) {
+  if(error) {
+    console.log(error)
+  }
+  res.redirect('/movie/' + movie.id)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2017-08-23T13:19:31.334+0800 I CONTROL  [main] Hotfix KB2731284 or later update is not installed, will zero-out data files
+
+2017-08-23T13:19:31.334+0800 I CONTROL  [initandlisten] MongoDB starting :
+ pid=7320 port=27017 dbpath=E:\00_project\01_node\mong\ab 64-bit host=USER
+ -20170422WB
+
+2017-08-23T13:19:31.334+0800 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-08-23T13:19:31.334+0800 I CONTROL  [initandlisten] db version v3.2.10
+
+2017-08-23T13:19:31.334+0800 I CONTROL  [initandlisten] git version: 79d9b3ab5ce20f51c272b4411202710a082d0317
+2017-08-23T13:19:31.334+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1t-fips  3 May 2016
+2017-08-23T13:19:31.334+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-08-23T13:19:31.334+0800 I CONTROL  [initandlisten] modules: none
+2017-08-23T13:19:31.334+0800 I CONTROL  [initandlisten] build environment:
+
+2017-08-23T13:19:31.334+0800 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-08-23T13:19:31.334+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-08-23T13:19:31.334+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-08-23T13:19:31.334+0800 I CONTROL  [initandlisten] options: { storage: { dbPath: "E:\00_project\01_node\mong\ab" } }
+
+2017-08-23T13:19:31.349+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4G,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),2017-08-23T13:19:32.023+0800 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+
+2017-08-23T13:19:32.023+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'E:/00_project/01_node/mong/ab/diagnostic.data'
+
+2017-08-23T13:19:32.227+0800 I NETWORK  [initandlisten] waiting for connec
+tions on port 27017
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,213 @@
+.book-title {
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.author-container {
+  display: flex;
+  .author-portrait {
+    width: 50px;
+    border-radius: 50px;
+  }
+  .author-context {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    flex: 1;
+    .author-name {
+      margin: 0;
+      height: 24px;
+      line-height: 24px;
+    }
+    .author-description {
+      margin: 0;
+    }
+    .ant-input {
+      width: 100%;
+    }
+  }
+  &.author-sm {
+    .author-portrait {
+      width: 36px;
+    }
+    .author-name {
+      font-size: 14px;
+      height: 18px;
+      line-height: 18px;
+      margin-bottom: 5px;
+    }
+    .author-description {
+      font-size: 13px;
+    }
+  }
+}
+.book-comment {
+  margin-bottom: 10px;
+  color: #555;
+}
+.subject-content {
+  margin: 20px 0;
+}
+.book-sponsor {
+  margin-bottom: 20px;
+  .book-sponsor-title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .book-sponsor-btn {
+    padding: 10px 0;
+    .ant-btn-primary {
+      border-radius: 40px;
+    }
+  }
+  .book-sponsor-user {
+    padding-left: 10px;
+    .ant-avatar {
+      margin-left: -10px;
+      border: 2px solid #f2f2f2;
+    }
+  }
+}
+.author-love {
+  background: #eee;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px 10px;
+  margin: 15px 0;
+  .author-description-about {
+    color: #666;
+    font-size: 12px;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    padding-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    word-break: normal;
+    word-spacing: normal;
+    text-overflow: ellipsis;
+  }
+}
+.book-share {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  .text-right {
+    display: flex;
+    align-items: center;
+  }
+  .ant-avatar+.ant-avatar {
+    margin-left: 10px;
+  }
+  .ant-avatar+.book-share-btn {
+    color: #aaa;
+    border: 1px solid #bbb;
+    padding: 0 20px;
+    background: none;
+    margin-left: 10px;
+    border-radius: 20px;
+    height: 40px;
+    line-height: 40px;
+    transition: ease .6s;
+    &:hover {
+      color: #999; // f37581
+      border: 1px solid #999;
+    }
+  }
+  &-love {
+    .ant-btn {
+      border-radius: 20px;
+      background: #f99766;
+      border-color: #f99766;
+      &:focus,
+      &:active,
+      &:hover {
+        box-shadow:  #f99766;
+      }
+    }
+  }
+}
+.book-group {
+  color: #bbb;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  a {
+    color: inherit;
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+.book-action {
+  font-size: 14px;
+  .anticon {
+    margin-right: 3px;
+  }
+  &+.book-action {
+    margin-left: 10px;
+  }
+
+  &-comment {
+    margin-right: 3px;
+  }
+}
+
+.book-reply {
+  border-left: 1px solid #ccc;
+  padding-left: 20px;
+  color: #555;
+  margin-top: 10px;
+  .book-reply-user{
+    color: #1672d4;
+    margin-right: 10px;
+  }
+  .book-reply-context {
+
+  }
+  .book-reply-comment-btn-box {
+    color: #bbb;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .book-action-comment {
+      margin-left: 10px;
+    }
+  }
+  .book-reply-comment-input-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .col-sm-6 {
+      height: 40px;
+      line-height: 40px;
+      margin-top: 10px;
+      .book-reply-comment-primary {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.book-comment-title {
+  display: flex;
+  .book-comment-left {
+    display: flex;
+    align-items: center;
+    .book-comment-title-text {
+      font-size: 20px;
+      margin-right: 10px;
+      .book-comment-num {
+        font-size: 24px;
+      }
+    }
+  }
+  .book-comment-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .book-comment-sort {
+      margin-left: 10px;
+    }
+  }
+}

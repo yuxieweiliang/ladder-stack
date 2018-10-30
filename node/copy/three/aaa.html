@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="three.js"></script>
+</head>
+<body>
+<script>
+
+  //  场景
+  var scene = new THREE.Scene();
+
+  // 相机
+  var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
+
+  // 渲染器
+  var renderer = new THREE.WebGLRenderer();
+
+  // 渲染器大小
+  renderer.setSize(500, 500);
+
+  document.body.appendChild(renderer.domElement);
+
+  // CubeGeometry(width, height, depth, segmentsWidth, segmentsHeight, segmentsDepth, materials, sides)
+  var geometry = new THREE.CubeGeometry(5, 3, 1);
+
+  var material = new THREE.MeshBasicMaterial({color: '#eadeae'});
+
+  var cube = new THREE.Mesh(geometry, material); scene.add(cube);
+
+  camera.position.z = 5;
+
+
+  function render() {
+    // 递归调用
+    requestAnimationFrame(render);
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+
+    // render( scene, camera, renderTarget, forceClear )
+    // renderTarget 渲染的目标，默认是渲染到前面定义的render变量中
+    // forceClear 每次绘制之前都将画布的内容给清除，即使自动清除标志autoClear为false，也会清除。
+    renderer.render(scene, camera);
+  }
+  render();
+</script>
+</body>
+</html>
